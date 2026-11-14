@@ -1,0 +1,352 @@
+/* ==========================================================================
+   BLOOM & CRADLE CLINIC — PATIENT & ADMIN DASHBOARD STYLESHEET
+   Collapsible Sidebar, Topbar, Progress Rings, Charts, Messaging & Responsive Cards
+   ========================================================================== */
+
+.dashboard-shell {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  min-height: 100vh;
+  background: var(--bg-page);
+}
+
+.dashboard-sidebar {
+  background: var(--bg-surface);
+  border-inline-end: 1px solid var(--border-subtle);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 950;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dashboard-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.78rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  transition: all 0.22s ease;
+}
+.sidebar-link svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.sidebar-link:hover {
+  background: var(--rose-100);
+  color: var(--plum-700);
+}
+.sidebar-link[aria-current="page"],
+.sidebar-link.is-active {
+  background: var(--gradient-plum-rose);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px -6px rgba(91, 42, 74, 0.4);
+}
+[data-theme="dark"] .sidebar-link:hover {
+  background: var(--bg-surface-alt);
+  color: var(--champagne-300);
+}
+
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dashboard-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0.9rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dashboard-topbar__left,
+.dashboard-topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.dashboard-search {
+  position: relative;
+  width: min(320px, 42vw);
+}
+.dashboard-search input {
+  width: 100%;
+  height: 42px;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  font-size: 0.9rem;
+}
+.dashboard-search svg {
+  position: absolute;
+  inset-inline-start: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+}
+
+.user-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.3rem 0.85rem 0.3rem 0.35rem;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+.user-pill img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user-pill__name {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.dashboard-content {
+  padding: 2rem;
+  max-width: 1360px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* Pregnancy Progress Ring Widget */
+.progress-ring-wrap {
+  position: relative;
+  width: 164px;
+  height: 164px;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-ring-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.progress-ring-bg {
+  fill: none;
+  stroke: var(--rose-200);
+  stroke-width: 10;
+}
+.progress-ring-fill {
+  fill: none;
+  stroke: var(--plum-700);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 408;
+  stroke-dashoffset: 122;
+  transition: stroke-dashoffset 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-theme="dark"] .progress-ring-fill {
+  stroke: var(--champagne-500);
+}
+.progress-ring-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.progress-ring-label strong {
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
+  color: var(--text-heading);
+  line-height: 1;
+}
+
+/* Milestone Dot Glow & Checkable List */
+.milestone-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.75rem;
+  transition: all 0.25s ease;
+}
+.milestone-item.is-completed {
+  border-color: var(--sage-600);
+  background: var(--sage-100);
+}
+[data-theme="dark"] .milestone-item.is-completed {
+  background: rgba(94, 140, 115, 0.16);
+}
+.milestone-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--champagne-500);
+  box-shadow: 0 0 12px var(--champagne-500);
+  flex-shrink: 0;
+}
+
+/* Messaging Thread Layout */
+.messages-layout {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 1.5rem;
+  min-height: 540px;
+}
+.thread-list {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.thread-item {
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: start;
+  transition: all 0.2s ease;
+}
+.thread-item.is-active,
+.thread-item:hover {
+  background: var(--rose-100);
+  border-color: var(--border-rose);
+}
+[data-theme="dark"] .thread-item.is-active,
+[data-theme="dark"] .thread-item:hover {
+  background: var(--bg-surface-alt);
+}
+.chat-window {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.chat-messages {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 420px;
+  overflow-y: auto;
+}
+.chat-bubble {
+  max-width: 78%;
+  padding: 0.9rem 1.2rem;
+  border-radius: var(--radius-md);
+  font-size: 0.94rem;
+}
+.chat-bubble--doctor {
+  align-self: flex-start;
+  background: var(--rose-100);
+  color: var(--plum-900);
+}
+[data-theme="dark"] .chat-bubble--doctor {
+  background: var(--bg-surface-alt);
+  color: var(--text-primary);
+}
+.chat-bubble--patient {
+  align-self: flex-end;
+  background: var(--plum-700);
+  color: #FFFFFF;
+}
+.chat-composer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* Responsive Dashboard & Mobile Stacked Table Cards */
+@media (max-width: 1024px) {
+  .dashboard-shell {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-sidebar {
+    position: fixed;
+    inset-inline-start: 0;
+    top: 0;
+    width: 280px;
+    transform: translateX(-105%);
+    box-shadow: var(--shadow-hover);
+  }
+  .dashboard-sidebar.is-open {
+    transform: translateX(0);
+  }
+  .messages-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 639.98px) {
+  .dashboard-topbar {
+    padding: 0.75rem 1rem;
+  }
+  .dashboard-content {
+    padding: 1.25rem 1rem;
+  }
+  .dashboard-search {
+    display: none;
+  }
+  .chat-composer {
+    flex-direction: column;
+  }
+  /* Simplify Tables to Stacked Cards on Mobile */
+  .data-table thead {
+    display: none;
+  }
+  .data-table, .data-table tbody, .data-table tr, .data-table td {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .data-table tr {
+    padding: 1rem;
+    border-bottom: 2px solid var(--border-subtle);
+  }
+  .data-table td {
+    padding: 0.45rem 0.5rem;
+    border: none;
+  }
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Replace placeholder brand name "Bloom & Cradle" with your final clinic name -->
+  <title>Patient Overview Dashboard | Bloom &amp; Cradle Portal</title>
+  <meta name="description" content="Patient portal overview at Bloom & Cradle: pregnancy progress ring, upcoming prenatal checkups, maternal health trends, and care tasks.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/rtl.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="dashboard-shell">
+    <!-- Collapsible Sidebar -->
+    <aside class="dashboard-sidebar" id="patient-sidebar" aria-label="Patient Portal Navigation">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logo"></use></svg></span>
+        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Patient Portal</small></span>
+      </a>
+
+      <nav class="dashboard-sidebar__nav">
+        <a href="index.html" class="sidebar-link" aria-current="page">
+          <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-grid"></use></svg>
+          Overview
+        </a>
+        <a href="book-checkup.html" class="sidebar-link">
+          <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-calendar"></use></svg>
+          Book Checkup
+        </a>
+        <a href="appointments.html" class="sidebar-link">
+          <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-clock"></use></svg>
+          My Appointments
+        </a>
+        <a href="pregnancy-tracker.html" class="sidebar-link">
+          <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-heart-pulse"></use></svg>
+          Pregnancy Tracker
+        </a>
+        <a href="reports.html" class="sidebar-link">
+          <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-file-text"></use></svg>
+          Lab &amp; Scan Reports
+        </a>
+        <a href="messages.html" class="sidebar-link">
+          <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-message"></use></svg>
+          Doctor Messages
+        </a>
+        <a href="profile.html" class="sidebar-link">
+          <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg>
+          Health Profile
+        </a>
+        <a href="settings.html" class="sidebar-link">
+          <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-settings"></use></svg>
+          Portal Settings
+        </a>
+      </nav>
+
+      <button type="button" class="btn btn-secondary" data-logout-btn style="width:100%;">
+        <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logout"></use></svg>
+        Sign Out
+      </button>
+    </aside>
+
+    <!-- Main Dashboard Area -->
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="dashboard-topbar__left">
+          <button type="button" class="icon-btn mobile-menu-toggle" data-sidebar-toggle aria-controls="patient-sidebar" aria-expanded="false" aria-label="Toggle portal sidebar">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-menu"></use></svg>
+          </button>
+          <div class="dashboard-search">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-search"></use></svg>
+            <label for="portal-search" class="sr-only">Search portal records</label>
+            <input type="search" id="portal-search" placeholder="Search scans, lab results, or doctors...">
+          </div>
+        </div>
+
+        <div class="dashboard-topbar__right">
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-moon"></use></svg>
+          </button>
+          <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
+          <a href="messages.html" class="icon-btn" aria-label="2 Unread Messages">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-bell"></use></svg>
+          </a>
+          <a href="profile.html" class="user-pill">
+            <span class="card-icon-wrap" style="width:34px;height:34px;margin:0;"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg></span>
+            <span class="user-pill__name">Elena Rostova</span>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="dashboard-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Clinic Website</a>
+          <svg width="14" height="14" aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-chevron-right"></use></svg>
+          <span aria-current="page">Patient Overview</span>
+        </nav>
+
+        <div style="margin-bottom:2rem;">
+          <span class="eyebrow">Good Morning, Elena</span>
+          <h1>Your Prenatal Care <em>Overview</em></h1>
+          <p class="lead">You are in Week 28 (Third Trimester). Your baby is growing beautifully and your next 4D Growth Scan is this Tuesday.</p>
+        </div>
+
+        <!-- Top Row: Pregnancy Week Ring + Next Appointment + Quick Actions -->
+        <div class="grid-3" style="margin-bottom:2rem;">
+          <!-- 1. Current Pregnancy Week Ring + Due Date -->
+          <article class="tilt-card anim-heartbeat">
+            <span class="card-tag">Third Trimester</span>
+            <div class="progress-ring-wrap" role="img" aria-label="Pregnancy Progress: Week 28 of 40, 70 percent complete">
+              <svg class="progress-ring-svg" viewBox="0 0 150 150">
+                <circle class="progress-ring-bg" cx="75" cy="75" r="65"></circle>
+                <circle class="progress-ring-fill" cx="75" cy="75" r="65"></circle>
+              </svg>
+              <div class="progress-ring-label">
+                <strong>Wk 28</strong>
+                <span style="font-size:0.78rem;color:var(--text-muted);">70% Complete</span>
+              </div>
+            </div>
+            <h3>Due Date: Feb 4, 2027</h3>
+            <p class="card-text">84 days remaining &bull; Baby size comparable to a glossy eggplant (~1.0 kg).</p>
+            <a href="pregnancy-tracker.html" class="btn btn-primary">Open Full Tracker</a>
+          </article>
+
+          <!-- 2. Next Appointment Card -->
+          <article class="tilt-card anim-breathe">
+            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-calendar"></use></svg></div>
+            <span class="badge badge-available" style="margin-bottom:0.5rem;">Confirmed Visit</span>
+            <span class="card-tag">Next Appointment</span>
+            <h3>28-Week Antenatal &amp; 4D Scan</h3>
+            <p class="card-text"><strong>Tuesday, Nov 24, 2026 &bull; 10:30 AM</strong><br>With Dr. Amara Okafor &bull; Suite 302 (Floor 3)</p>
+            <a href="appointments.html" class="btn btn-secondary">Manage Appointment</a>
+          </article>
+
+          <!-- 3. Quick Actions -->
+          <article class="tilt-card">
+            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-sparkles"></use></svg></div>
+            <span class="card-tag">Portal Shortcuts</span>
+            <h3>Quick Patient Actions</h3>
+            <p class="card-text">Schedule a follow-up scan, inspect your latest blood work, or message your midwife.</p>
+            <div style="display:flex;flex-direction:column;gap:0.65rem;width:100%;margin-top:auto;">
+              <a href="book-checkup.html" class="btn btn-primary" style="width:100%;">Book Checkup</a>
+              <a href="reports.html" class="btn btn-secondary" style="width:100%;">View Lab Reports</a>
+              <a href="messages.html" class="btn btn-secondary" style="width:100%;">Message Doctor</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Health Snapshot (4 Canvas/SVG Mini-Charts: Weight, BP, Hemoglobin, Glucose) -->
+        <section aria-labelledby="vitals-heading" style="margin-bottom:2rem;">
+          <div class="section-header" style="margin-bottom:1.5rem;">
+            <span class="eyebrow">Maternal Vitals &amp; Trends</span>
+            <h2 id="vitals-heading">Health Snapshot (Drawn Live With Canvas)</h2>
+          </div>
+
+          <div class="grid-4">
+            <article class="tilt-card">
+              <span class="card-tag">Maternal Weight</span>
+              <h3>66.4 kg (+6.4 kg)</h3>
+              <canvas width="200" height="70" data-chart-values="60.0,61.2,62.5,63.8,65.1,66.4" aria-label="Weight gain trend chart"></canvas>
+              <p class="card-text">Within optimal IOM second/third-trimester curve.</p>
+            </article>
+
+            <article class="tilt-card">
+              <span class="card-tag">Blood Pressure</span>
+              <h3>112 / 72 mmHg</h3>
+              <canvas width="200" height="70" data-chart-values="110,114,111,113,110,112" aria-label="Blood pressure trend chart"></canvas>
+              <p class="card-text">Normotensive &bull; Zero proteinuria detected.</p>
+            </article>
+
+            <article class="tilt-card">
+              <span class="card-tag">Hemoglobin (Hb)</span>
+              <h3>12.4 g/dL</h3>
+              <canvas width="200" height="70" data-chart-values="12.8,12.2,11.9,12.1,12.3,12.4" aria-label="Hemoglobin trend chart"></canvas>
+              <p class="card-text">Optimal iron stores on gentle bisglycinate.</p>
+            </article>
+
+            <article class="tilt-card">
+              <span class="card-tag">Fasting Glucose</span>
+              <h3>84 mg/dL</h3>
+              <canvas width="200" height="70" data-chart-values="86,83,85,82,84,84" aria-label="Glucose trend chart"></canvas>
+              <p class="card-text">Normal 26-week OGTT glucose tolerance screen.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Upcoming Tasks (Vaccines, Scans, Supplements) + Notifications -->
+        <div class="grid-2">
+          <section class="tilt-card" aria-labelledby="tasks-heading">
+            <span class="card-tag">Action Checklist</span>
+            <h2 id="tasks-heading" style="font-size:1.5rem;margin-bottom:1rem;">Upcoming Prenatal Tasks</h2>
+            <div style="width:100%;">
+              <div class="milestone-item is-completed">
+                <span><strong>26-Week Oral Glucose Screen</strong> &bull; Completed Nov 8</span>
+                <span class="badge badge-success">Done</span>
+              </div>
+              <div class="milestone-item">
+                <span><strong>Tdap Maternal Vaccine</strong> &bull; Due at Week 28 Visit</span>
+                <span class="badge badge-plum">Tue Nov 24</span>
+              </div>
+              <div class="milestone-item">
+                <span><strong>Daily Prenatal + 30mg Gentle Iron</strong> &bull; Evening Dose</span>
+                <span class="badge badge-gold">Daily</span>
+              </div>
+            </div>
+            <a href="pregnancy-tracker.html" class="btn btn-secondary">Manage All Milestones</a>
+          </section>
+
+          <section class="tilt-card" aria-labelledby="notifications-heading">
+            <span class="card-tag">Recent Updates</span>
+            <h2 id="notifications-heading" style="font-size:1.5rem;margin-bottom:1rem;">Portal Notifications</h2>
+            <div style="width:100%;">
+              <div class="milestone-item">
+                <span><strong>New Lab Report Released:</strong> Ferritin &amp; CBC Panel reviewed by Dr. Okafor.</span>
+                <a href="reports.html" class="badge badge-available">View PDF</a>
+              </div>
+              <div class="milestone-item">
+                <span><strong>Midwife Message:</strong> Mei-Ling Chen shared your Blossom Suite water-birth guide.</span>
+                <a href="messages.html" class="badge badge-plum">Read</a>
+              </div>
+              <div class="milestone-item">
+                <span><strong>Suite Reservation:</strong> Cradle Deluxe Suite deposit verified.</span>
+                <span class="badge badge-success">Verified</span>
+              </div>
+            </div>
+            <a href="messages.html" class="btn btn-secondary">Open Inbox</a>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/tilt.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/plugins/smooth-charts.js" defer></script>
+  <script src="../../assets/js/dashboard.js" defer></script>
+</body>
+</html>

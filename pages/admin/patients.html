@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Replace placeholder brand name "Bloom & Cradle" with your final clinic name -->
+  <title>Patients Directory &amp; Records | Bloom &amp; Cradle Admin</title>
+  <meta name="description" content="Search, sort, and manage enrolled maternity and gynecology patient charts in the Bloom & Cradle Admin Portal.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/rtl.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="admin-sidebar" aria-label="Admin Portal Navigation">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logo"></use></svg></span>
+        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Clinic Admin</small></span>
+      </a>
+      <nav class="dashboard-sidebar__nav">
+        <a href="index.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-grid"></use></svg>Overview &amp; KPIs</a>
+        <a href="appointments.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-calendar"></use></svg>Appointments</a>
+        <a href="patients.html" class="sidebar-link" aria-current="page"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-users"></use></svg>Patients Directory</a>
+        <a href="doctors.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-stethoscope"></use></svg>Doctors Roster</a>
+        <a href="reports.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-activity"></use></svg>Clinical Analytics</a>
+        <a href="messages.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-message"></use></svg>Staff &amp; Triage Alerts</a>
+        <a href="settings.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-settings"></use></svg>Clinic Settings</a>
+      </nav>
+      <button type="button" class="btn btn-secondary" data-logout-btn style="width:100%;">
+        <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logout"></use></svg>Sign Out
+      </button>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="dashboard-topbar__left">
+          <button type="button" class="icon-btn mobile-menu-toggle" data-sidebar-toggle aria-controls="admin-sidebar" aria-expanded="false" aria-label="Toggle admin sidebar">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-menu"></use></svg>
+          </button>
+          <span class="eyebrow" style="margin:0;">Patient Registry</span>
+        </div>
+        <div class="dashboard-topbar__right">
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-moon"></use></svg></button>
+          <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
+          <a href="settings.html" class="user-pill">
+            <span class="card-icon-wrap" style="width:34px;height:34px;margin:0;"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg></span>
+            <span class="user-pill__name">Sophia Brooks (Admin)</span>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="dashboard-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Admin Overview</a>
+          <svg width="14" height="14" aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-chevron-right"></use></svg>
+          <span aria-current="page">Patients Directory</span>
+        </nav>
+
+        <div style="margin-bottom:2rem;">
+          <span class="eyebrow">Enrolled Patient Charts</span>
+          <h1>Patient Management <em>Directory</em></h1>
+          <p class="lead">View gestational age, assigned lead specialist, package tier, and blood group for active patients.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Chart ID</th>
+                <th scope="col">Patient Name &amp; Age</th>
+                <th scope="col">Care Pathway / Gestation</th>
+                <th scope="col">Blood Group</th>
+                <th scope="col">Lead Specialist</th>
+                <th scope="col">Package / Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>#BC-419</strong></td>
+                <td>Elena Rostova (31)</td>
+                <td>Week 28+3 &bull; EDD Feb 4, 2027</td>
+                <td>O Rh+</td>
+                <td>Dr. Amara Okafor</td>
+                <td><span class="badge badge-available">Comfort Cradle</span></td>
+              </tr>
+              <tr>
+                <td><strong>#BC-508</strong></td>
+                <td>Claire Moreau (34)</td>
+                <td>Week 12+1 &bull; EDD May 29, 2027</td>
+                <td>A Rh+</td>
+                <td>Dr. Linnea Lindqvist</td>
+                <td><span class="badge badge-plum">Imperial Suite</span></td>
+              </tr>
+              <tr>
+                <td><strong>#BC-392</strong></td>
+                <td>Maya Krishnan (29)</td>
+                <td>Postnatal Week 6 &bull; Water Birth</td>
+                <td>B Rh+</td>
+                <td>Mei-Ling Chen, IBCLC</td>
+                <td><span class="badge badge-success">Discharged Home</span></td>
+              </tr>
+              <tr>
+                <td><strong>#BC-514</strong></td>
+                <td>Nadia Al-Sabah (27)</td>
+                <td>PCOS &amp; Preconception Cycle Care</td>
+                <td>O Rh-</td>
+                <td>Dr. Kavya Nair</td>
+                <td><span class="badge badge-gold">Outpatient Active</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/tilt.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/dashboard.js" defer></script>
+</body>
+</html>

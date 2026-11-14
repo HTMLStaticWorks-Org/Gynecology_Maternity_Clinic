@@ -1,0 +1,11 @@
+# Bloom & Cradle Women's Health & Maternity Clinic - robots.txt
+# TODO: Replace https://www.bloomandcradle.example with your production domain
+
+User-agent: *
+Allow: /
+Disallow: /pages/dashboard/
+Disallow: /dashboard/
+Disallow: /pages/admin/
+Disallow: /admin/
+
+Sitemap: https://www.bloomandcradle.example/sitemap.xml

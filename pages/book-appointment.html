@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Replace placeholder brand name "Bloom & Cradle" with your final clinic name -->
+  <title>Book Your Consultation | Bloom &amp; Cradle Clinic</title>
+  <meta name="description" content="Schedule your gynecology, fertility, or prenatal consultation online at Bloom & Cradle Clinic with instant specialist slot confirmation.">
+  <link rel="canonical" href="https://www.bloomandcradle.example/pages/book-appointment.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Book an Appointment | Bloom & Cradle Women's Health & Maternity">
+  <meta property="og:description" content="Real-time availability for OB-GYN, 4D ultrasound, fertility, and lactation consultations.">
+  <meta property="og:image" content="../assets/icons/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="emergency-strip" role="region" aria-label="Emergency and Labour Contact">
+    <div class="container emergency-strip__inner">
+      <span class="emergency-strip__badge">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        24/7 Labour &amp; Maternal Triage Desk: <a href="tel:+18005550199">+1 (800) 555-0199</a>
+      </span>
+      <span>Mon–Sat: 08:00 – 20:00 &bull; Private Suites &amp; Same-Day Ultrasound</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-logo"></use></svg></span>
+        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Gynecology &amp; Maternity</small></span>
+      </a>
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary Navigation">
+        <ul class="main-nav__list">
+          <li class="nav-dropdown">
+            <a href="index.html" class="main-nav__link">Home</a>
+            <ul class="nav-dropdown__menu">
+              <li><a href="index.html" class="nav-dropdown__link">Home 1 — Editorial Women's Health</a></li>
+              <li><a href="home-2.html" class="nav-dropdown__link">Home 2 — Maternity Journey</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <a href="services.html" class="main-nav__link">Services</a>
+            <ul class="nav-dropdown__menu">
+              <li><a href="services.html" class="nav-dropdown__link">All Clinical Services</a></li>
+              <li><a href="service-details.html" class="nav-dropdown__link">Service Details</a></li>
+              <li><a href="maternity-packages.html" class="nav-dropdown__link">Maternity Packages</a></li>
+              <li><a href="pregnancy-journey.html" class="nav-dropdown__link">Week-by-Week Journey</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <a href="doctors.html" class="main-nav__link">Doctors</a>
+            <ul class="nav-dropdown__menu">
+              <li><a href="doctors.html" class="nav-dropdown__link">Meet Our Specialists</a></li>
+              <li><a href="doctor-details.html" class="nav-dropdown__link">Doctor Profile</a></li>
+            </ul>
+          </li>
+          <li><a href="book-appointment.html" class="main-nav__link" aria-current="page">Book Now</a></li>
+          <li class="nav-dropdown">
+            <a href="about.html" class="main-nav__link">About</a>
+            <ul class="nav-dropdown__menu">
+              <li><a href="about.html" class="nav-dropdown__link">Our Clinic Story</a></li>
+              <li><a href="gallery.html" class="nav-dropdown__link">Facility Tour Gallery</a></li>
+              <li><a href="blog.html" class="nav-dropdown__link">Journal &amp; Articles</a></li>
+              <li><a href="faq.html" class="nav-dropdown__link">Patient FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" class="main-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-moon"></use></svg></button>
+        <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
+        <button type="button" class="icon-btn" data-lang-toggle aria-label="Switch language">EN</button>
+        <a href="login.html" class="btn btn-primary">Patient Portal</a>
+        <button type="button" class="icon-btn mobile-menu-toggle" data-nav-toggle aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-menu"></use></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <svg width="14" height="14" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-chevron-right"></use></svg>
+          <span aria-current="page">Book Appointment</span>
+        </nav>
+        <span class="eyebrow">Instant Online Scheduling</span>
+        <h1>Reserve Your <em>Private Consultation</em></h1>
+        <p class="lead">Select your clinical service, preferred specialist, and convenient time slot in five simple steps.</p>
+      </div>
+    </section>
+
+    <!-- 1 & 2. MULTI-STEP BOOKING WIZARD + REAL-TIME AVAILABILITY + CONFIRMATION SCREEN -->
+    <section class="section" aria-labelledby="booking-wizard-heading">
+      <div class="container">
+        <div class="tabs-nav reveal" aria-label="Booking Progress Steps">
+          <span class="badge badge-plum" data-step-indicator="1">1. Service</span>
+          <span class="badge badge-gold" data-step-indicator="2">2. Specialist</span>
+          <span class="badge badge-gold" data-step-indicator="3">3. Date &amp; Time</span>
+          <span class="badge badge-gold" data-step-indicator="4">4. Patient Details</span>
+          <span class="badge badge-gold" data-step-indicator="5">5. Confirmed</span>
+        </div>
+
+        <!-- TODO: Connect booking wizard endpoint to clinic EHR / Calendly / custom backend API -->
+        <div id="booking-wizard" class="tilt-card reveal" style="max-width:780px;margin-inline:auto;padding:2.5rem;">
+          <h2 id="booking-wizard-heading" style="margin-bottom:1.25rem;">Interactive Appointment Scheduler</h2>
+
+          <!-- Step 1: Service -->
+          <div data-booking-step="1" style="width:100%;">
+            <span class="card-tag">Step 1 of 5</span>
+            <h3>Select Clinical Department &amp; Service</h3>
+            <div class="form-group" style="margin-top:1rem;">
+              <label for="book-service" class="form-label">Clinical Consultation Type</label>
+              <select id="book-service" class="form-control">
+                <option value="Antenatal Consultation &amp; Dating Scan">Antenatal Consultation &amp; Dating Scan (60 min)</option>
+                <option value="4D Fetal Ultrasound &amp; Doppler">4D Fetal Ultrasound &amp; Doppler (45 min)</option>
+                <option value="Annual Well-Woman &amp; Pap/HPV Screening">Annual Well-Woman &amp; Pap/HPV Screening (45 min)</option>
+                <option value="PCOS &amp; Hormone Root-Cause Assessment">PCOS &amp; Hormone Root-Cause Assessment (50 min)</option>
+                <option value="Infertility &amp; IVF Couple Consultation">Infertility &amp; IVF Couple Consultation (60 min)</option>
+                <option value="Perimenopause &amp; HRT Optimization">Perimenopause &amp; HRT Optimization (45 min)</option>
+                <option value="IBCLC Lactation &amp; Postnatal Check">IBCLC Lactation &amp; Postnatal Check (45 min)</option>
+              </select>
+            </div>
+            <div class="btn-group" style="justify-content:center;margin-top:1.5rem;">
+              <button type="button" class="btn btn-primary" data-next-step="2">Continue to Specialist</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Doctor -->
+          <div data-booking-step="2" hidden style="width:100%;">
+            <span class="card-tag">Step 2 of 5</span>
+            <h3>Choose Your Preferred Specialist</h3>
+            <div class="form-group" style="margin-top:1rem;">
+              <label for="book-doctor" class="form-label">Lead Clinician</label>
+              <select id="book-doctor" class="form-control">
+                <option value="Dr. Amara Okafor (Senior OB-GYN)">Dr. Amara Okafor — Senior Consultant OB-GYN</option>
+                <option value="Dr. Evelyn Vance (Medical Director)">Dr. Evelyn Vance — Medical Director &amp; High-Risk OB-GYN</option>
+                <option value="Dr. Linnea Lindqvist (Maternal-Fetal Medicine)">Dr. Linnea Lindqvist — Maternal-Fetal Medicine</option>
+                <option value="Dr. Kavya Nair (Fertility &amp; IVF Lead)">Dr. Kavya Nair — Reproductive Endocrinology &amp; IVF</option>
+                <option value="Mei-Ling Chen (IBCLC Lactation Lead)">Mei-Ling Chen — IBCLC Lactation Specialist</option>
+                <option value="Zara Al-Hashimi (Pelvic Floor Physio)">Zara Al-Hashimi — Pelvic Floor Physiotherapist</option>
+              </select>
+            </div>
+            <div class="btn-group" style="justify-content:center;margin-top:1.5rem;">
+              <button type="button" class="btn btn-secondary" data-prev-step="1">Back</button>
+              <button type="button" class="btn btn-primary" data-next-step="3">Continue to Date &amp; Time</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Date & Time (Live Availability Calendar Demo) -->
+          <div data-booking-step="3" hidden style="width:100%;">
+            <span class="card-tag">Step 3 of 5</span>
+            <h3>Select Available Date &amp; Time Slot</h3>
+            <div class="grid-2" style="margin-top:1rem;">
+              <div class="form-group">
+                <label for="book-date" class="form-label">Preferred Date</label>
+                <input type="date" id="book-date" class="form-control" value="2026-11-20">
+              </div>
+              <div class="form-group">
+                <label for="book-time" class="form-label">Real-Time Available Slots</label>
+                <select id="book-time" class="form-control">
+                  <option value="09:00 AM">09:00 AM — Morning Sanctuary Slot (Available)</option>
+                  <option value="10:30 AM" selected>10:30 AM — Mid-Morning Slot (Available)</option>
+                  <option value="02:15 PM">02:15 PM — Afternoon Slot (Available)</option>
+                  <option value="04:30 PM">04:30 PM — Early Evening Slot (Available)</option>
+                </select>
+              </div>
+            </div>
+            <div class="btn-group" style="justify-content:center;margin-top:1.5rem;">
+              <button type="button" class="btn btn-secondary" data-prev-step="2">Back</button>
+              <button type="button" class="btn btn-primary" data-next-step="4">Continue to Patient Details</button>
+            </div>
+          </div>
+
+          <!-- Step 4: Details & Deposit Placeholder -->
+          <div data-booking-step="4" hidden style="width:100%;">
+            <span class="card-tag">Step 4 of 5</span>
+            <h3>Your Contact &amp; Insurance / Deposit Preference</h3>
+            <div class="grid-2" style="margin-top:1rem;">
+              <div class="form-group">
+                <label for="book-name" class="form-label">Full Name</label>
+                <input type="text" id="book-name" class="form-control" value="Elena Rostova" required>
+              </div>
+              <div class="form-group">
+                <label for="book-phone" class="form-label">Mobile Number (for SMS Reminder)</label>
+                <input type="tel" id="book-phone" class="form-control" value="+1 (415) 555-0182" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="book-payment" class="form-label">Billing &amp; Deposit Option (Stripe / PayPal / Insurance Placeholder)</label>
+              <select id="book-payment" class="form-control">
+                <option value="Pay at Clinic / Direct Insurance Verification">Direct Insurance Billing / Pay at Clinic Reception</option>
+                <option value="Stripe $50 Priority Slot Deposit">Stripe Hold — $50 Refundable Priority Slot Deposit</option>
+                <option value="PayPal Express Booking">PayPal Express Booking</option>
+              </select>
+            </div>
+            <div class="btn-group" style="justify-content:center;margin-top:1.5rem;">
+              <button type="button" class="btn btn-secondary" data-prev-step="3">Back</button>
+              <button type="button" class="btn btn-primary" data-next-step="5">Confirm Appointment</button>
+            </div>
+          </div>
+
+          <!-- Step 5: Confirmation Screen + Email Notification Mock -->
+          <div data-booking-step="5" hidden style="width:100%;">
+            <span class="badge badge-available" style="margin-bottom:0.75rem;">Appointment Confirmed</span>
+            <h3>Your Sanctuary Visit Is Reserved</h3>
+            <div id="booking-summary-box" style="padding:1.25rem;border-radius:var(--radius-md);background:var(--rose-100);color:var(--plum-900);margin-block:1rem;"></div>
+            <div style="padding:1rem;border-radius:var(--radius-sm);background:var(--champagne-100);color:var(--plum-900);margin-bottom:1.5rem;font-size:0.88rem;">
+              <strong>Email &amp; SMS Notification Mock Sent:</strong> An encrypted calendar invitation (.ics), valet parking pass, and pre-arrival intake link have been dispatched to your email and Patient Portal.
+            </div>
+            <div class="btn-group" style="justify-content:center;">
+              <a href="dashboard/appointments.html" class="btn btn-primary">View in Patient Dashboard</a>
+              <button type="button" class="btn btn-secondary" data-prev-step="1">Book Another Visit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. WHAT-TO-BRING CHECKLIST + CONCIERGE WELCOME -->
+    <section class="section section-alt" aria-labelledby="what-to-bring-heading">
+      <div class="container">
+        <div class="grid-2" style="align-items:center;">
+          <div class="reveal">
+            <span class="eyebrow">Arrival Preparation</span>
+            <h2 id="what-to-bring-heading">What to Bring to Your Appointment</h2>
+            <p style="margin-bottom:1.5rem;">To make your visit effortless, please bring or upload the following items to your Patient Portal beforehand:</p>
+            <div class="grid-2" style="gap:1rem;">
+              <div class="tilt-card" style="padding:1.25rem;">
+                <h3>1. Photo ID &amp; Insurance Card</h3>
+                <p class="card-text">For seamless cashless verification at our private check-in lounge.</p>
+              </div>
+              <div class="tilt-card" style="padding:1.25rem;">
+                <h3>2. Prior Scans &amp; Lab Reports</h3>
+                <p class="card-text">Recent blood panels, hormone tests, or prior ultrasound records.</p>
+              </div>
+              <div class="tilt-card" style="padding:1.25rem;">
+                <h3>3. Current Medications &amp; Supplements</h3>
+                <p class="card-text">Including prenatal vitamins, iron, thyroid medication, or herbal blends.</p>
+              </div>
+              <div class="tilt-card" style="padding:1.25rem;">
+                <h3>4. Your Questions &amp; Birth Partner</h3>
+                <p class="card-text">Partners or a trusted support person are warmly welcomed at every visit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <article class="tilt-card">
+              <div class="card-media">
+                <picture>
+                  <source srcset="../assets/images/booking-concierge-welcome.webp" type="image/webp">
+                  <img src="../assets/images/booking-concierge-welcome.jpg" alt="Patient concierge welcoming a smiling woman into the Bloom and Cradle check-in lounge" width="1000" height="750" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <span class="card-tag">Complimentary Valet</span>
+              <h3>Stress-Free Arrival at Suite 300</h3>
+              <p class="card-text">Pull up to our private porte-cochère on Aurelia Boulevard for complimentary valet parking and direct elevator access.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="color:var(--rose-100);margin-bottom:1rem;">
+            <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-logo"></use></svg></span>
+            <span>Bloom &amp; Cradle</span>
+          </a>
+          <p style="margin-bottom:1rem;">A boutique sanctuary for women's health, fertility, prenatal diagnostics, and family-centered maternity care.</p>
+          <p><strong>Privacy &amp; Confidentiality:</strong> All patient records are protected under strict medical privacy and HIPAA-aligned data protection standards.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 (Women's Health)</a></li>
+            <li><a href="home-2.html">Home 2 (Maternity Journey)</a></li>
+            <li><a href="about.html">About Our Clinic</a></li>
+            <li><a href="services.html">Clinical Services</a></li>
+            <li><a href="doctors.html">Our Specialists</a></li>
+            <li><a href="maternity-packages.html">Maternity Packages</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Patient Resources</h3>
+          <ul class="footer-links">
+            <li><a href="pregnancy-journey.html">Week-by-Week Pregnancy</a></li>
+            <li><a href="book-appointment.html">Book Appointment</a></li>
+            <li><a href="gallery.html">Facility Gallery</a></li>
+            <li><a href="blog.html">Health Journal</a></li>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="login.html">Patient Portal Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Clinic Hours &amp; Location</h3>
+          <ul class="footer-links">
+            <li>420 Aurelia Boulevard, Suite 300, San Francisco, CA 94108</li>
+            <li>Outpatient Clinic: Mon–Sat, 08:00 – 20:00</li>
+            <li>Labour &amp; Delivery Suites: 24 Hours / 7 Days</li>
+            <li>Appointments: <a href="tel:+18005550144">+1 (800) 555-0144</a></li>
+            <li>Email: <a href="mailto:care@bloomandcradle.example">care@bloomandcradle.example</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Bloom &amp; Cradle Women's Health &amp; Maternity Clinic. All rights reserved.</p>
+        <div style="display:flex;gap:1.25rem;flex-wrap:wrap;">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="coming-soon.html">Pre-Launch Preview</a>
+          <a href="admin/index.html">Staff Admin</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/tilt.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

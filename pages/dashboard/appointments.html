@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Replace placeholder brand name "Bloom & Cradle" with your final clinic name -->
+  <title>My Appointments | Bloom &amp; Cradle Patient Portal</title>
+  <meta name="description" content="Manage your upcoming and past prenatal, ultrasound, and gynecology appointments in the Bloom & Cradle Patient Portal.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/rtl.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="patient-sidebar" aria-label="Patient Portal Navigation">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logo"></use></svg></span>
+        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Patient Portal</small></span>
+      </a>
+      <nav class="dashboard-sidebar__nav">
+        <a href="index.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-grid"></use></svg>Overview</a>
+        <a href="book-checkup.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-calendar"></use></svg>Book Checkup</a>
+        <a href="appointments.html" class="sidebar-link" aria-current="page"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-clock"></use></svg>My Appointments</a>
+        <a href="pregnancy-tracker.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-heart-pulse"></use></svg>Pregnancy Tracker</a>
+        <a href="reports.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-file-text"></use></svg>Lab &amp; Scan Reports</a>
+        <a href="messages.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-message"></use></svg>Doctor Messages</a>
+        <a href="profile.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg>Health Profile</a>
+        <a href="settings.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-settings"></use></svg>Portal Settings</a>
+      </nav>
+      <button type="button" class="btn btn-secondary" data-logout-btn style="width:100%;">
+        <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logout"></use></svg>Sign Out
+      </button>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="dashboard-topbar__left">
+          <button type="button" class="icon-btn mobile-menu-toggle" data-sidebar-toggle aria-controls="patient-sidebar" aria-expanded="false" aria-label="Toggle portal sidebar">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-menu"></use></svg>
+          </button>
+          <span class="eyebrow" style="margin:0;">Visit Schedule</span>
+        </div>
+        <div class="dashboard-topbar__right">
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-moon"></use></svg></button>
+          <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
+          <a href="profile.html" class="user-pill">
+            <span class="card-icon-wrap" style="width:34px;height:34px;margin:0;"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg></span>
+            <span class="user-pill__name">Elena Rostova</span>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="dashboard-content" data-tabs>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Portal Overview</a>
+          <svg width="14" height="14" aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-chevron-right"></use></svg>
+          <span aria-current="page">My Appointments</span>
+        </nav>
+
+        <div style="margin-bottom:2rem;">
+          <span class="eyebrow">Appointment History &amp; Upcoming Visits</span>
+          <h1>Manage Your <em>Clinic Appointments</em></h1>
+          <p class="lead">Filter between upcoming scheduled checkups and completed consultations.</p>
+        </div>
+
+        <div class="tabs-nav" role="tablist" aria-label="Appointment Status Tabs">
+          <button type="button" class="tab-btn is-active" role="tab" aria-selected="true" data-tab-target="appts-upcoming">Upcoming Visits (3)</button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-target="appts-past">Past Completed Visits (4)</button>
+        </div>
+
+        <!-- Upcoming Tab -->
+        <div id="appts-upcoming" class="tab-panel is-active">
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th scope="col">Date &amp; Time</th>
+                  <th scope="col">Consultation / Scan</th>
+                  <th scope="col">Specialist &amp; Suite</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Nov 24, 2026 &bull; 10:30 AM</strong></td>
+                  <td>28-Week Antenatal &amp; 4D Growth Scan</td>
+                  <td>Dr. Amara Okafor &bull; Suite 302</td>
+                  <td><span class="badge badge-available">Confirmed</span></td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-secondary" data-reschedule-appt>Reschedule</button>
+                      <button type="button" class="btn btn-secondary" data-cancel-appt>Cancel</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Dec 08, 2026 &bull; 02:15 PM</strong></td>
+                  <td>Pelvic Floor Birth Readiness Session</td>
+                  <td>Zara Al-Hashimi, DPT &bull; Studio 4A</td>
+                  <td><span class="badge badge-available">Confirmed</span></td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-secondary" data-reschedule-appt>Reschedule</button>
+                      <button type="button" class="btn btn-secondary" data-cancel-appt>Cancel</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Dec 22, 2026 &bull; 11:00 AM</strong></td>
+                  <td>32-Week Fetal Doppler &amp; Birth Preferences</td>
+                  <td>Dr. Amara Okafor &bull; Suite 302</td>
+                  <td><span class="badge badge-plum">Scheduled</span></td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-secondary" data-reschedule-appt>Reschedule</button>
+                      <button type="button" class="btn btn-secondary" data-cancel-appt>Cancel</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Past Tab -->
+        <div id="appts-past" class="tab-panel">
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Consultation / Scan</th>
+                  <th scope="col">Specialist</th>
+                  <th scope="col">Outcome</th>
+                  <th scope="col">Report</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Nov 08, 2026</strong></td>
+                  <td>26-Week Oral Glucose Tolerance &amp; Iron Panel</td>
+                  <td>Dr. Amara Okafor</td>
+                  <td><span class="badge badge-success">Completed</span></td>
+                  <td><a href="reports.html" class="btn btn-secondary">View Lab PDF</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Sep 28, 2026</strong></td>
+                  <td>20-Week Detailed Fetal Anomaly Scan</td>
+                  <td>Dr. Linnea Lindqvist</td>
+                  <td><span class="badge badge-success">Completed</span></td>
+                  <td><a href="reports.html" class="btn btn-secondary">View Scan Report</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Aug 03, 2026</strong></td>
+                  <td>12-Week Nuchal Translucency &amp; NIPT</td>
+                  <td>Dr. Linnea Lindqvist</td>
+                  <td><span class="badge badge-success">Completed</span></td>
+                  <td><a href="reports.html" class="btn btn-secondary">View NIPT Result</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Jul 05, 2026</strong></td>
+                  <td>8-Week Viability &amp; Antenatal Booking Visit</td>
+                  <td>Dr. Amara Okafor</td>
+                  <td><span class="badge badge-success">Completed</span></td>
+                  <td><a href="reports.html" class="btn btn-secondary">View Summary</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/tilt.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/dashboard.js" defer></script>
+</body>
+</html>

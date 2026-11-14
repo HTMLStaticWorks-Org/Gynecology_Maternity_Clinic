@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Replace placeholder brand name "Bloom & Cradle" with your final clinic name -->
+  <title>Clinic Settings &amp; Director Profile | Bloom &amp; Cradle Admin</title>
+  <meta name="description" content="Configure maternity suite availability, emergency triage numbers, and administrator profile settings in the Bloom & Cradle Admin Portal.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/rtl.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="admin-sidebar" aria-label="Admin Portal Navigation">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logo"></use></svg></span>
+        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Clinic Admin</small></span>
+      </a>
+      <nav class="dashboard-sidebar__nav">
+        <a href="index.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-grid"></use></svg>Overview &amp; KPIs</a>
+        <a href="appointments.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-calendar"></use></svg>Appointments</a>
+        <a href="patients.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-users"></use></svg>Patients Directory</a>
+        <a href="doctors.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-stethoscope"></use></svg>Doctors Roster</a>
+        <a href="reports.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-activity"></use></svg>Clinical Analytics</a>
+        <a href="messages.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-message"></use></svg>Staff &amp; Triage Alerts</a>
+        <a href="settings.html" class="sidebar-link" aria-current="page"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-settings"></use></svg>Clinic Settings</a>
+      </nav>
+      <button type="button" class="btn btn-secondary" data-logout-btn style="width:100%;">
+        <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logout"></use></svg>Sign Out
+      </button>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="dashboard-topbar__left">
+          <button type="button" class="icon-btn mobile-menu-toggle" data-sidebar-toggle aria-controls="admin-sidebar" aria-expanded="false" aria-label="Toggle admin sidebar">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-menu"></use></svg>
+          </button>
+          <span class="eyebrow" style="margin:0;">System Configuration</span>
+        </div>
+        <div class="dashboard-topbar__right">
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-moon"></use></svg></button>
+          <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
+          <a href="settings.html" class="user-pill">
+            <span class="card-icon-wrap" style="width:34px;height:34px;margin:0;"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg></span>
+            <span class="user-pill__name">Sophia Brooks (Admin)</span>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="dashboard-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Admin Overview</a>
+          <svg width="14" height="14" aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-chevron-right"></use></svg>
+          <span aria-current="page">Clinic Settings</span>
+        </nav>
+
+        <div style="margin-bottom:2rem;">
+          <span class="eyebrow">Hospital Operations &amp; Security</span>
+          <h1>Clinic Configuration &amp; <em>Director Profile</em></h1>
+          <p class="lead">Manage clinic contact lines, birthing suite capacity, and administrative security settings.</p>
+        </div>
+
+        <div class="grid-2" style="align-items:start;">
+          <div class="card-panel" style="text-align:center;">
+            <picture>
+              <source srcset="../../assets/images/admin-director-avatar.webp" type="image/webp">
+              <img src="../../assets/images/admin-director-avatar.jpg" alt="Sophia Brooks — Director of Clinical Operations" width="160" height="160" loading="lazy" decoding="async" style="width:140px;height:140px;border-radius:50%;object-fit:cover;margin:0 auto 1.25rem;border:3px solid var(--champagne-500);">
+            </picture>
+            <span class="badge badge-gold">Clinical Operations Director</span>
+            <h2 style="font-size:1.5rem;margin-top:0.75rem;">Sophia Brooks, MHA</h2>
+            <p style="color:var(--text-secondary);font-size:0.92rem;margin-bottom:1.5rem;">admin@bloomcradle.demo &bull; Belgravia Sanctuary Wing</p>
+            <button type="button" class="btn btn-secondary" data-export-data>Export Clinic Audit JSON</button>
+          </div>
+
+          <form class="card-panel" data-validate-form novalidate>
+            <h2 style="font-size:1.35rem;margin-bottom:1.25rem;">Sanctuary Operational Parameters</h2>
+            <div class="form-group">
+              <label for="clinic-name" class="form-label">Official Sanctuary Name</label>
+              <input type="text" id="clinic-name" class="form-control" value="Bloom &amp; Cradle Women's Health &amp; Maternity Clinic" required>
+            </div>
+            <div class="form-group">
+              <label for="triage-hotline" class="form-label">24/7 Labour &amp; Triage Direct Line</label>
+              <input type="tel" id="triage-hotline" class="form-control" value="+1 (800) 555-0199" required>
+            </div>
+            <div class="form-group">
+              <label for="suite-capacity" class="form-label">Active Birthing Suites Available for Booking</label>
+              <select id="suite-capacity" class="form-select">
+                <option value="6">All 6 Luxury Birthing Suites Active</option>
+                <option value="5">5 Suites Active (1 Suite in Deep UV Sanitization)</option>
+                <option value="4">4 Suites Active</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Clinic Settings</button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/tilt.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/dashboard.js" defer></script>
+</body>
+</html>

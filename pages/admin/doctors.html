@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Replace placeholder brand name "Bloom & Cradle" with your final clinic name -->
+  <title>Doctors Roster &amp; On-Call Shifts | Bloom &amp; Cradle Admin</title>
+  <meta name="description" content="Manage specialist consultation hours, labour suite on-call rotations, and outpatient room assignments in the Bloom & Cradle Admin Portal.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/rtl.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="admin-sidebar" aria-label="Admin Portal Navigation">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logo"></use></svg></span>
+        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Clinic Admin</small></span>
+      </a>
+      <nav class="dashboard-sidebar__nav">
+        <a href="index.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-grid"></use></svg>Overview &amp; KPIs</a>
+        <a href="appointments.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-calendar"></use></svg>Appointments</a>
+        <a href="patients.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-users"></use></svg>Patients Directory</a>
+        <a href="doctors.html" class="sidebar-link" aria-current="page"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-stethoscope"></use></svg>Doctors Roster</a>
+        <a href="reports.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-activity"></use></svg>Clinical Analytics</a>
+        <a href="messages.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-message"></use></svg>Staff &amp; Triage Alerts</a>
+        <a href="settings.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-settings"></use></svg>Clinic Settings</a>
+      </nav>
+      <button type="button" class="btn btn-secondary" data-logout-btn style="width:100%;">
+        <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logout"></use></svg>Sign Out
+      </button>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="dashboard-topbar__left">
+          <button type="button" class="icon-btn mobile-menu-toggle" data-sidebar-toggle aria-controls="admin-sidebar" aria-expanded="false" aria-label="Toggle admin sidebar">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-menu"></use></svg>
+          </button>
+          <span class="eyebrow" style="margin:0;">Medical Roster</span>
+        </div>
+        <div class="dashboard-topbar__right">
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-moon"></use></svg></button>
+          <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
+          <a href="settings.html" class="user-pill">
+            <span class="card-icon-wrap" style="width:34px;height:34px;margin:0;"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg></span>
+            <span class="user-pill__name">Sophia Brooks (Admin)</span>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="dashboard-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Admin Overview</a>
+          <svg width="14" height="14" aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-chevron-right"></use></svg>
+          <span aria-current="page">Doctors Roster</span>
+        </nav>
+
+        <div style="margin-bottom:2rem;">
+          <span class="eyebrow">Specialist Shift &amp; On-Call Control</span>
+          <h1>Doctors &amp; Midwives <em>Roster</em></h1>
+          <p class="lead">Manage outpatient room allocations and 24/7 labour ward on-call assignments.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="tilt-card">
+            <span class="badge badge-available" style="margin-bottom:0.5rem;">On-Duty &bull; Suite 302</span>
+            <h3>Dr. Amara Okafor</h3>
+            <p class="card-text">Senior Consultant OB-GYN<br>12 Patients Scheduled Today &bull; Night Labour Cover</p>
+            <button type="button" class="btn btn-secondary" data-admin-action="Dr. Okafor shift roster updated.">Update Shift</button>
+          </article>
+
+          <article class="tilt-card">
+            <span class="badge badge-available" style="margin-bottom:0.5rem;">On-Duty &bull; 4D Studio</span>
+            <h3>Dr. Linnea Lindqvist</h3>
+            <p class="card-text">Maternal-Fetal Medicine<br>9 Ultrasound &amp; Echo Scans Today</p>
+            <button type="button" class="btn btn-secondary" data-admin-action="Dr. Lindqvist imaging schedule updated.">Update Shift</button>
+          </article>
+
+          <article class="tilt-card">
+            <span class="badge badge-plum" style="margin-bottom:0.5rem;">24/7 NICU Cover</span>
+            <h3>Dr. Sofia Rossi</h3>
+            <p class="card-text">Lead Neonatologist<br>3 Newborn Discharge Checks &amp; Birthing Standby</p>
+            <button type="button" class="btn btn-secondary" data-admin-action="Dr. Rossi neonatal roster updated.">Update Shift</button>
+          </article>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/tilt.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/dashboard.js" defer></script>
+</body>
+</html>

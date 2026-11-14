@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Replace placeholder brand name "Bloom & Cradle" with your final clinic name -->
+  <title>Doctor Messages | Bloom &amp; Cradle Patient Portal</title>
+  <meta name="description" content="Encrypted direct messaging with your OB-GYN, midwife, and lactation consultant inside the Bloom & Cradle Patient Portal.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/rtl.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="patient-sidebar" aria-label="Patient Portal Navigation">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logo"></use></svg></span>
+        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Patient Portal</small></span>
+      </a>
+      <nav class="dashboard-sidebar__nav">
+        <a href="index.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-grid"></use></svg>Overview</a>
+        <a href="book-checkup.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-calendar"></use></svg>Book Checkup</a>
+        <a href="appointments.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-clock"></use></svg>My Appointments</a>
+        <a href="pregnancy-tracker.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-heart-pulse"></use></svg>Pregnancy Tracker</a>
+        <a href="reports.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-file-text"></use></svg>Lab &amp; Scan Reports</a>
+        <a href="messages.html" class="sidebar-link" aria-current="page"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-message"></use></svg>Doctor Messages</a>
+        <a href="profile.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg>Health Profile</a>
+        <a href="settings.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-settings"></use></svg>Portal Settings</a>
+      </nav>
+      <button type="button" class="btn btn-secondary" data-logout-btn style="width:100%;">
+        <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logout"></use></svg>Sign Out
+      </button>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="dashboard-topbar__left">
+          <button type="button" class="icon-btn mobile-menu-toggle" data-sidebar-toggle aria-controls="patient-sidebar" aria-expanded="false" aria-label="Toggle portal sidebar">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-menu"></use></svg>
+          </button>
+          <span class="eyebrow" style="margin:0;">Encrypted Care Inbox</span>
+        </div>
+        <div class="dashboard-topbar__right">
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-moon"></use></svg></button>
+          <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
+          <a href="profile.html" class="user-pill">
+            <span class="card-icon-wrap" style="width:34px;height:34px;margin:0;"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg></span>
+            <span class="user-pill__name">Elena Rostova</span>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="dashboard-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Portal Overview</a>
+          <svg width="14" height="14" aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-chevron-right"></use></svg>
+          <span aria-current="page">Doctor Messages</span>
+        </nav>
+
+        <div style="margin-bottom:2rem;">
+          <span class="eyebrow">Direct Specialist Communication</span>
+          <h1>Care Team <em>Messages</em></h1>
+          <p class="lead">Select a care team thread on the left or send a message with report attachments.</p>
+        </div>
+
+        <div class="messages-layout">
+          <!-- Thread List -->
+          <aside class="thread-list" aria-label="Conversation Threads">
+            <div class="thread-item is-active" data-thread-doctor="Dr. Amara Okafor (Senior OB-GYN)">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <strong>Dr. Amara Okafor</strong>
+                <span class="badge badge-available">Online</span>
+              </div>
+              <p style="font-size:0.84rem;margin-top:0.25rem;">Your 26-week glucose &amp; ferritin results look wonderful...</p>
+            </div>
+
+            <div class="thread-item" data-thread-doctor="Mei-Ling Chen (IBCLC Lactation Lead)">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <strong>Mei-Ling Chen, IBCLC</strong>
+                <span class="badge badge-plum">1 Unread</span>
+              </div>
+              <p style="font-size:0.84rem;margin-top:0.25rem;">Attached the prenatal colostrum harvesting guide for week 36...</p>
+            </div>
+
+            <div class="thread-item" data-thread-doctor="Zara Al-Hashimi (Pelvic Floor Physio)">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <strong>Zara Al-Hashimi, DPT</strong>
+                <span class="badge badge-gold">Physio</span>
+              </div>
+              <p style="font-size:0.84rem;margin-top:0.25rem;">Great progress on your 360-degree diaphragmatic breathwork...</p>
+            </div>
+          </aside>
+
+          <!-- Active Chat Window -->
+          <section class="chat-window" aria-label="Active Conversation">
+            <div style="padding:1rem 1.5rem;border-bottom:1px solid var(--border-subtle);display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <strong id="chat-active-doctor" style="font-size:1.08rem;color:var(--plum-700);">Dr. Amara Okafor (Senior OB-GYN)</strong>
+                <span style="display:block;font-size:0.8rem;color:var(--text-muted);">Typical response time: Under 2 hours</span>
+              </div>
+              <a href="book-checkup.html" class="btn btn-secondary">Book Video Call</a>
+            </div>
+
+            <div id="chat-messages" class="chat-messages" aria-live="polite">
+              <div class="chat-bubble chat-bubble--doctor">
+                Warm hello Elena! I just reviewed your 26-week Oral Glucose Tolerance Test and serum ferritin panel. Your glucose curve is completely normal (84 / 126 / 108 mg/dL) and your ferritin is 44 ng/mL.
+              </div>
+              <div class="chat-bubble chat-bubble--patient">
+                Thank you so much Dr. Okafor! That is such a relief. Should I continue taking my gentle iron bisglycinate every evening?
+              </div>
+              <div class="chat-bubble chat-bubble--doctor">
+                Yes—continuing 28 mg every alternate evening with vitamin C will keep your iron reserves strong right through birth and breastfeeding. See you on Tuesday at 10:30 AM for your 4D scan!
+              </div>
+            </div>
+
+            <form id="chat-send-form" class="chat-composer">
+              <label for="chat-input" class="sr-only">Write a message to your doctor</label>
+              <input type="text" id="chat-input" class="form-control" placeholder="Type your message to Dr. Okafor (or attach a photo/report)..." required>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/tilt.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/dashboard.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+/* ==========================================================================
+   BLOOM & CRADLE CLINIC — RTL (Right-to-Left) SUPPORT STYLESHEET
+   Supports Arabic / Hebrew [dir="rtl"] across public & dashboard pages
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .btn:hover svg.icon-directional,
+[dir="rtl"] .breadcrumb svg {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .btn:hover svg {
+  transform: translateX(-3px);
+}
+
+[dir="rtl"] .form-group,
+[dir="rtl"] .accordion-trigger,
+[dir="rtl"] .data-table {
+  text-align: right;
+}
+
+[dir="rtl"] .section-header,
+[dir="rtl"] .page-hero__inner,
+[dir="rtl"] .tilt-card,
+[dir="rtl"] .card {
+  text-align: center;
+}
+
+[dir="rtl"] .timeline-list::before {
+  left: auto;
+  right: 18px;
+}
+
+[dir="rtl"] .dashboard-sidebar {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 1024px) {
+  [dir="rtl"] .dashboard-sidebar {
+    transform: translateX(100%);
+  }
+  [dir="rtl"] .dashboard-sidebar.is-open {
+    transform: translateX(0);
+  }
+}

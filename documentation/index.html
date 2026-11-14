@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation &amp; Developer Guide | Bloom &amp; Cradle Template v1.0.0</title>
+  <meta name="description" content="Official installation, customization, page structure, credits, and changelog documentation for the Bloom & Cradle Gynecology & Maternity Clinic website.">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="../pages/index.html" class="brand-logo">
+        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-logo"></use></svg></span>
+        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Documentation v1.0</small></span>
+      </a>
+      <nav class="primary-nav" aria-label="Documentation Navigation">
+        <ul class="nav-list">
+          <li><a href="#install" class="nav-link">Installation</a></li>
+          <li><a href="#customize" class="nav-link">Customization</a></li>
+          <li><a href="#pages" class="nav-link">Page Matrix</a></li>
+          <li><a href="#credits" class="nav-link">Credits</a></li>
+          <li><a href="#changelog" class="nav-link">Changelog</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-moon"></use></svg></button>
+        <a href="../pages/index.html" class="btn btn-primary">Launch Live Site</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Developer &amp; Clinic Owner Handbook</span>
+        <h1>Bloom &amp; Cradle <em>Documentation</em></h1>
+        <p>Everything you need to launch, rebrand, customize colors/fonts, replace photographs, and deploy your multi-page Gynecology &amp; Maternity Clinic website.</p>
+      </div>
+
+      <section id="install" class="card-panel" style="margin-bottom:2rem;">
+        <h2>1. Installation &amp; Quick Start</h2>
+        <p style="color:var(--text-secondary);">This project is built with pure semantic HTML5, CSS3, and vanilla ES6+ JavaScript. There is no build step, bundler, or Node dependency required to run the site.</p>
+        <ul style="color:var(--text-secondary);line-height:1.8;padding-left:1.25rem;">
+          <li><strong>Direct Local Launch:</strong> Double-click root <code>index.html</code> or open <code>pages/index.html</code> directly in Chrome, Safari, Edge, or Firefox.</li>
+          <li><strong>Local HTTP Server:</strong> Run <code>npx serve .</code> or <code>python -m http.server 8080</code> from the project root.</li>
+          <li><strong>Static Hosting Deployment:</strong> Upload the root folder directly to Netlify, Vercel, GitHub Pages, Cloudflare Pages, AWS S3, or any standard cPanel web host.</li>
+        </ul>
+      </section>
+
+      <section id="customize" class="card-panel" style="margin-bottom:2rem;">
+        <h2>2. Customization Guide</h2>
+        <div class="grid-2" style="margin-top:1.5rem;">
+          <div>
+            <h3>Brand Name &amp; Copy</h3>
+            <p style="color:var(--text-secondary);font-size:0.94rem;">Search for <code>TODO:</code> across the project to replace the working brand name <strong>"Bloom &amp; Cradle Women's Health &amp; Maternity Clinic"</strong>, emergency numbers, and canonical URLs.</p>
+          </div>
+          <div>
+            <h3>Color Palette ("Blush, Plum &amp; Champagne")</h3>
+            <p style="color:var(--text-secondary);font-size:0.94rem;">Edit `:root` CSS variables in <code>assets/css/style.css</code> (light mode) and <code>assets/css/dark-mode.css</code> (aubergine dark mode `#1B0E19`).</p>
+          </div>
+          <div>
+            <h3>Self-Hosted Fonts &amp; SVG Icons</h3>
+            <p style="color:var(--text-secondary);font-size:0.94rem;">Font files (<code>Fraunces</code>, <code>Plus Jakarta Sans</code>, <code>Caveat</code>) are self-hosted in <code>assets/fonts/</code>. All UI icons are stored in <code>assets/icons/icons.svg</code>.</p>
+          </div>
+          <div>
+            <h3>Demo Portal Credentials</h3>
+            <p style="color:var(--text-secondary);font-size:0.94rem;">Patient Login: <code>elena@patient.demo</code> / <code>BloomPatient2026!</code><br>Admin Login: <code>admin@bloomcradle.demo</code> / <code>BloomAdmin2026!</code></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pages" class="card-panel" style="margin-bottom:2rem;">
+        <h2>3. Complete 38-Page Inventory</h2>
+        <p style="color:var(--text-secondary);margin-bottom:1rem;">Every page follows the strict Non-Negotiable Section Allocation Matrix with zero repeated sections and 70 unique local photorealistic images:</p>
+        <div class="grid-3">
+          <div>
+            <h4>Public Pages (18)</h4>
+            <ul style="font-size:0.9rem;line-height:1.8;padding-left:1.1rem;">
+              <li><a href="../pages/index.html">Home 1 (Warm Editorial)</a></li>
+              <li><a href="../pages/home-2.html">Home 2 (Luxury Birthing Suite)</a></li>
+              <li><a href="../pages/about.html">About Us</a></li>
+              <li><a href="../pages/services.html">Services Directory</a></li>
+              <li><a href="../pages/service-details.html">Service Details</a></li>
+              <li><a href="../pages/doctors.html">Doctors Directory</a></li>
+              <li><a href="../pages/doctor-details.html">Doctor Profile</a></li>
+              <li><a href="../pages/maternity-packages.html">Maternity Packages</a></li>
+              <li><a href="../pages/book-appointment.html">5-Step Booking Wizard</a></li>
+              <li><a href="../pages/pregnancy-journey.html">Pregnancy Journey (Wk 1–40)</a></li>
+              <li><a href="../pages/blog.html">Wellness Journal</a></li>
+              <li><a href="../pages/blog-details.html">Article Details</a></li>
+              <li><a href="../pages/gallery.html">Facility Tour Gallery</a></li>
+              <li><a href="../pages/faq.html">FAQ Center</a></li>
+              <li><a href="../pages/contact.html">Contact &amp; Map</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Auth &amp; Utility (8)</h4>
+            <ul style="font-size:0.9rem;line-height:1.8;padding-left:1.1rem;">
+              <li><a href="../pages/login.html">Patient &amp; Admin Login</a></li>
+              <li><a href="../pages/register.html">Patient Registration</a></li>
+              <li><a href="../pages/forgot-password.html">Password Recovery</a></li>
+              <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="../pages/terms.html">Terms of Service</a></li>
+              <li><a href="../pages/404.html">404 Error Page</a></li>
+              <li><a href="../pages/coming-soon.html">Coming Soon Launch Page</a></li>
+              <li><a href="../index.html">Root Launcher</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Patient (8) &amp; Admin (7) Portals</h4>
+            <ul style="font-size:0.9rem;line-height:1.8;padding-left:1.1rem;">
+              <li><a href="../pages/dashboard/index.html">Patient Overview</a></li>
+              <li><a href="../pages/dashboard/book-checkup.html">Book Checkup</a></li>
+              <li><a href="../pages/dashboard/appointments.html">My Appointments</a></li>
+              <li><a href="../pages/dashboard/pregnancy-tracker.html">Pregnancy Tracker</a></li>
+              <li><a href="../pages/dashboard/reports.html">Lab Reports &amp; Scans</a></li>
+              <li><a href="../pages/dashboard/messages.html">Message Doctor</a></li>
+              <li><a href="../pages/dashboard/profile.html">My Profile</a></li>
+              <li><a href="../pages/dashboard/settings.html">Portal Settings</a></li>
+              <li><a href="../pages/admin/index.html">Admin Overview (7 Pages)</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="credits" class="card-panel" style="margin-bottom:2rem;">
+        <h2>4. Credits &amp; Architecture</h2>
+        <p style="color:var(--text-secondary);">Self-hosted WOFF2 typography (Fraunces, Plus Jakarta Sans, Caveat), custom SVG symbol sprite (<code>assets/icons/icons.svg</code>), 70 local photorealistic WebP + JPG photographs (<code>assets/images/</code>), and zero external runtime dependencies.</p>
+      </section>
+
+      <section id="changelog" class="card-panel">
+        <h2>5. Changelog &amp; Support</h2>
+        <p style="color:var(--text-secondary);"><strong>Version 1.0.0 (November 2026):</strong> Initial full release of all 38 HTML pages, CSS design system, 3D tilt engine, and interactive Patient/Admin dashboards.</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

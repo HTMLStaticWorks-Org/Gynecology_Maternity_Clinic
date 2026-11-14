@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Replace placeholder brand name "Bloom & Cradle" with your final clinic name -->
+  <title>Health Profile &amp; Medical History | Bloom &amp; Cradle Portal</title>
+  <meta name="description" content="Manage your personal information, blood group, allergies, obstetric history, insurance, and emergency contact in the Bloom & Cradle Patient Portal.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/rtl.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="patient-sidebar" aria-label="Patient Portal Navigation">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logo"></use></svg></span>
+        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Patient Portal</small></span>
+      </a>
+      <nav class="dashboard-sidebar__nav">
+        <a href="index.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-grid"></use></svg>Overview</a>
+        <a href="book-checkup.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-calendar"></use></svg>Book Checkup</a>
+        <a href="appointments.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-clock"></use></svg>My Appointments</a>
+        <a href="pregnancy-tracker.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-heart-pulse"></use></svg>Pregnancy Tracker</a>
+        <a href="reports.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-file-text"></use></svg>Lab &amp; Scan Reports</a>
+        <a href="messages.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-message"></use></svg>Doctor Messages</a>
+        <a href="profile.html" class="sidebar-link" aria-current="page"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg>Health Profile</a>
+        <a href="settings.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-settings"></use></svg>Portal Settings</a>
+      </nav>
+      <button type="button" class="btn btn-secondary" data-logout-btn style="width:100%;">
+        <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logout"></use></svg>Sign Out
+      </button>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="dashboard-topbar__left">
+          <button type="button" class="icon-btn mobile-menu-toggle" data-sidebar-toggle aria-controls="patient-sidebar" aria-expanded="false" aria-label="Toggle portal sidebar">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-menu"></use></svg>
+          </button>
+          <span class="eyebrow" style="margin:0;">Medical Chart &amp; Contacts</span>
+        </div>
+        <div class="dashboard-topbar__right">
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-moon"></use></svg></button>
+          <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
+          <a href="profile.html" class="user-pill">
+            <span class="card-icon-wrap" style="width:34px;height:34px;margin:0;"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg></span>
+            <span class="user-pill__name">Elena Rostova</span>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="dashboard-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Portal Overview</a>
+          <svg width="14" height="14" aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-chevron-right"></use></svg>
+          <span aria-current="page">Health Profile</span>
+        </nav>
+
+        <div style="margin-bottom:2rem;">
+          <span class="eyebrow">Confidential Health Record</span>
+          <h1>Patient Profile &amp; <em>Medical History</em></h1>
+          <p class="lead">Keep your blood group, allergies, emergency birth partner, and insurance details current for seamless labour suite check-in.</p>
+        </div>
+
+        <div class="grid-2" style="grid-template-columns:0.8fr 1.5fr;align-items:start;">
+          <!-- Patient Avatar & Summary Card -->
+          <article class="tilt-card">
+            <div class="card-media" style="width:140px;height:140px;border-radius:50%;aspect-ratio:1/1;margin-inline:auto;">
+              <picture>
+                <source srcset="../../assets/images/dashboard-patient-avatar.webp" type="image/webp">
+                <img src="../../assets/images/dashboard-patient-avatar.jpg" alt="Portrait of patient Elena Rostova" width="300" height="300" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span class="badge badge-available" style="margin-bottom:0.5rem;">Chart ID: #BC-2026-419</span>
+            <h2>Elena Rostova</h2>
+            <p class="card-text">Age: 31 &bull; Gravida 1, Para 0 (G1P0)<br>Estimated Due Date: Feb 4, 2027</p>
+            <div class="trust-chips" style="justify-content:center;">
+              <span class="trust-chip">Blood Group: O Rh+</span>
+              <span class="trust-chip">Rubella: Immune</span>
+              <span class="trust-chip">Allergies: Penicillin (Mild)</span>
+            </div>
+          </article>
+
+          <!-- Editable Profile Form with Validation -->
+          <section class="tilt-card" aria-labelledby="profile-form-heading">
+            <span class="card-tag">Medical &amp; Insurance Details</span>
+            <h2 id="profile-form-heading" style="font-size:1.5rem;margin-bottom:1rem;">Update Personal &amp; Clinical Information</h2>
+
+            <form action="#" method="post" data-validate-form="profile" data-success-msg="Your health profile and emergency contact details have been saved." style="width:100%;">
+              <div class="grid-2">
+                <div class="form-group">
+                  <label for="prof-name" class="form-label">Full Legal Name *</label>
+                  <input type="text" id="prof-name" class="form-control" value="Elena Rostova" required aria-describedby="prof-name-err">
+                  <span id="prof-name-err" class="field-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="prof-blood" class="form-label">ABO / Rh Blood Group</label>
+                  <select id="prof-blood" class="form-control">
+                    <option value="O Positive (O+)" selected>O Positive (O+)</option>
+                    <option value="O Negative (O-)">O Negative (O-)</option>
+                    <option value="A Positive (A+)">A Positive (A+)</option>
+                    <option value="B Positive (B+)">B Positive (B+)</option>
+                    <option value="AB Positive (AB+)">AB Positive (AB+)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid-2">
+                <div class="form-group">
+                  <label for="prof-allergies" class="form-label">Known Drug / Latex / Food Allergies *</label>
+                  <input type="text" id="prof-allergies" class="form-control" value="Penicillin (mild rash)" required aria-describedby="prof-alg-err">
+                  <span id="prof-alg-err" class="field-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="prof-history" class="form-label">Medical &amp; Obstetric History</label>
+                  <input type="text" id="prof-history" class="form-control" value="G1P0, no prior surgeries, normotensive">
+                </div>
+              </div>
+
+              <div class="grid-2">
+                <div class="form-group">
+                  <label for="prof-partner" class="form-label">Birth Partner / Emergency Contact *</label>
+                  <input type="text" id="prof-partner" class="form-control" value="Aleksandr Rostov (Spouse) — +1 (415) 555-0190" required aria-describedby="prof-part-err">
+                  <span id="prof-part-err" class="field-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="prof-insurance" class="form-label">Insurance Plan &amp; Member ID</label>
+                  <input type="text" id="prof-insurance" class="form-control" value="Aurelia Premier PPO &bull; #AUR-9920144">
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;">Save Health Profile Changes</button>
+              <p class="form-status-box" hidden style="margin-top:0.75rem;color:var(--sage-700);font-weight:600;"></p>
+            </form>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/tilt.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/dashboard.js" defer></script>
+</body>
+</html>

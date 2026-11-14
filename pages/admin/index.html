@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Replace placeholder brand name "Bloom & Cradle" with your final clinic name -->
+  <title>Admin Overview &amp; Statistics | Bloom &amp; Cradle Staff</title>
+  <meta name="description" content="Clinic administration overview at Bloom & Cradle: occupancy KPIs, outpatient appointment charts, birthing suite utilization, and revenue analytics.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/rtl.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="admin-sidebar" aria-label="Admin Portal Navigation">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logo"></use></svg></span>
+        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Clinic Admin</small></span>
+      </a>
+      <nav class="dashboard-sidebar__nav">
+        <a href="index.html" class="sidebar-link" aria-current="page"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-grid"></use></svg>Overview &amp; KPIs</a>
+        <a href="appointments.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-calendar"></use></svg>Appointments</a>
+        <a href="patients.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-users"></use></svg>Patients Directory</a>
+        <a href="doctors.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-stethoscope"></use></svg>Doctors Roster</a>
+        <a href="reports.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-activity"></use></svg>Clinical Analytics</a>
+        <a href="messages.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-message"></use></svg>Staff &amp; Triage Alerts</a>
+        <a href="settings.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-settings"></use></svg>Clinic Settings</a>
+      </nav>
+      <button type="button" class="btn btn-secondary" data-logout-btn style="width:100%;">
+        <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logout"></use></svg>Sign Out
+      </button>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="dashboard-topbar__left">
+          <button type="button" class="icon-btn mobile-menu-toggle" data-sidebar-toggle aria-controls="admin-sidebar" aria-expanded="false" aria-label="Toggle admin sidebar">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-menu"></use></svg>
+          </button>
+          <span class="eyebrow" style="margin:0;">Operations &amp; Maternity Wing Control</span>
+        </div>
+        <div class="dashboard-topbar__right">
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-moon"></use></svg></button>
+          <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
+          <a href="settings.html" class="user-pill">
+            <span class="card-icon-wrap" style="width:34px;height:34px;margin:0;"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg></span>
+            <span class="user-pill__name">Sophia Brooks (Admin)</span>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="dashboard-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Public Site</a>
+          <svg width="14" height="14" aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-chevron-right"></use></svg>
+          <span aria-current="page">Admin Overview &amp; Statistics</span>
+        </nav>
+
+        <div style="margin-bottom:2rem;">
+          <span class="eyebrow">Real-Time Clinic Pulse</span>
+          <h1>Clinic Operations &amp; <em>Maternity Statistics</em></h1>
+          <p class="lead">Monitor today's outpatient consultations, active birthing suites, neonatal occupancy, and monthly package revenue.</p>
+        </div>
+
+        <!-- 4 Admin KPI Cards -->
+        <div class="grid-4" style="margin-bottom:2rem;">
+          <article class="tilt-card anim-heartbeat">
+            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-calendar"></use></svg></div>
+            <span class="card-tag">Today's Consultations</span>
+            <h3>42 Scheduled</h3>
+            <p class="card-text">38 confirmed &bull; 4 checked in at Aurelia Atrium.</p>
+          </article>
+
+          <article class="tilt-card anim-breathe">
+            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-baby"></use></svg></div>
+            <span class="card-tag">Active Birthing Suites</span>
+            <h3>5 / 6 Occupied</h3>
+            <p class="card-text">2 water-birth suites in active labour &bull; 3 postnatal recovery.</p>
+          </article>
+
+          <article class="tilt-card anim-blossom">
+            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-users"></use></svg></div>
+            <span class="card-tag">Enrolled Maternity</span>
+            <h3>318 Expectant Mothers</h3>
+            <p class="card-text">+24 new first-trimester bookings this month.</p>
+          </article>
+
+          <article class="tilt-card anim-shine">
+            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-credit-card"></use></svg></div>
+            <span class="card-tag">Monthly Package Revenue</span>
+            <h3>$418,600</h3>
+            <p class="card-text">+14.2% vs prior month &bull; 98% insurance clearance.</p>
+          </article>
+        </div>
+
+        <!-- Appointments Chart + Revenue Chart (Canvas) -->
+        <div class="grid-2" style="margin-bottom:2rem;">
+          <section class="tilt-card" aria-labelledby="admin-appt-chart-heading">
+            <span class="card-tag">6-Month Volume</span>
+            <h2 id="admin-appt-chart-heading" style="font-size:1.45rem;margin-bottom:0.75rem;">Outpatient &amp; 4D Scan Volume Trend</h2>
+            <canvas width="360" height="120" data-chart-values="620,675,710,740,795,842" aria-label="Monthly appointments trend line"></canvas>
+            <p class="card-text">842 total consultations completed in November (+11.8% growth).</p>
+            <a href="appointments.html" class="btn btn-secondary">Manage Appointments</a>
+          </section>
+
+          <section class="tilt-card" aria-labelledby="admin-rev-chart-heading">
+            <span class="card-tag">Financial Performance</span>
+            <h2 id="admin-rev-chart-heading" style="font-size:1.45rem;margin-bottom:0.75rem;">Maternity Package &amp; Diagnostics Revenue ($K)</h2>
+            <canvas width="360" height="120" data-chart-values="310,335,352,378,394,418" aria-label="Monthly clinic revenue trend line"></canvas>
+            <p class="card-text">Comfort Cradle ($7,400) accounts for 61% of maternity suite reservations.</p>
+            <a href="reports.html" class="btn btn-secondary">View Analytics Report</a>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/tilt.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/plugins/smooth-charts.js" defer></script>
+  <script src="../../assets/js/dashboard.js" defer></script>
+</body>
+</html>

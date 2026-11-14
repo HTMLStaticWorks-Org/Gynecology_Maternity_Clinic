@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Replace placeholder brand name "Bloom & Cradle" with your final clinic name -->
+  <title>Interactive Pregnancy Tracker | Bloom &amp; Cradle Portal</title>
+  <meta name="description" content="Track your checkable pregnancy milestones, baby development, symptom & mood journal, kick counter, contraction timer, and hospital bag inside the Bloom & Cradle Portal.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/rtl.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="patient-sidebar" aria-label="Patient Portal Navigation">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logo"></use></svg></span>
+        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Patient Portal</small></span>
+      </a>
+      <nav class="dashboard-sidebar__nav">
+        <a href="index.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-grid"></use></svg>Overview</a>
+        <a href="book-checkup.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-calendar"></use></svg>Book Checkup</a>
+        <a href="appointments.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-clock"></use></svg>My Appointments</a>
+        <a href="pregnancy-tracker.html" class="sidebar-link" aria-current="page"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-heart-pulse"></use></svg>Pregnancy Tracker</a>
+        <a href="reports.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-file-text"></use></svg>Lab &amp; Scan Reports</a>
+        <a href="messages.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-message"></use></svg>Doctor Messages</a>
+        <a href="profile.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg>Health Profile</a>
+        <a href="settings.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-settings"></use></svg>Portal Settings</a>
+      </nav>
+      <button type="button" class="btn btn-secondary" data-logout-btn style="width:100%;">
+        <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logout"></use></svg>Sign Out
+      </button>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="dashboard-topbar__left">
+          <button type="button" class="icon-btn mobile-menu-toggle" data-sidebar-toggle aria-controls="patient-sidebar" aria-expanded="false" aria-label="Toggle portal sidebar">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-menu"></use></svg>
+          </button>
+          <span class="eyebrow" style="margin:0;">Week 28, Day 3 &bull; Third Trimester</span>
+        </div>
+        <div class="dashboard-topbar__right">
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-moon"></use></svg></button>
+          <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
+          <a href="profile.html" class="user-pill">
+            <span class="card-icon-wrap" style="width:34px;height:34px;margin:0;"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg></span>
+            <span class="user-pill__name">Elena Rostova</span>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="dashboard-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Portal Overview</a>
+          <svg width="14" height="14" aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-chevron-right"></use></svg>
+          <span aria-current="page">Pregnancy Tracker</span>
+        </nav>
+
+        <div style="margin-bottom:2rem;">
+          <span class="eyebrow">Personalised Gestational Companion</span>
+          <h1>Your 40-Week <em>Pregnancy Tracker</em></h1>
+          <p class="lead">Check off completed clinical scans, log symptoms and fetal movements, and time contractions as labour approaches.</p>
+        </div>
+
+        <!-- Row 1: Baby Development Card + Trimester Progress + Weight Gain Chart -->
+        <div class="grid-3" style="margin-bottom:2rem;">
+          <article class="tilt-card anim-heartbeat">
+            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-baby"></use></svg></div>
+            <span class="card-tag">Week 28 Baby Development</span>
+            <h3>37.6 cm &bull; ~1,005 grams</h3>
+            <p class="card-text">Your baby's eyes can blink, eyelashes have grown in, and REM sleep cycles have begun. Lungs are maturing rapidly with surfactant production.</p>
+          </article>
+
+          <article class="tilt-card anim-breathe">
+            <div class="progress-ring-wrap" role="img" aria-label="Trimester progress: 70 percent">
+              <svg class="progress-ring-svg" viewBox="0 0 150 150">
+                <circle class="progress-ring-bg" cx="75" cy="75" r="65"></circle>
+                <circle class="progress-ring-fill" cx="75" cy="75" r="65"></circle>
+              </svg>
+              <div class="progress-ring-label">
+                <strong>70%</strong>
+                <span style="font-size:0.75rem;color:var(--text-muted);">Trimester 3</span>
+              </div>
+            </div>
+            <h3>Trimester 3 Started</h3>
+            <p class="card-text">12 weeks remaining until your February 4, 2027 due date.</p>
+          </article>
+
+          <article class="tilt-card">
+            <span class="card-tag">Maternal Weight Gain Curve</span>
+            <h3>+6.4 kg Total Gain</h3>
+            <canvas width="220" height="80" data-chart-values="60.0,60.8,61.9,63.2,64.8,66.4" aria-label="Pregnancy weight gain chart"></canvas>
+            <p class="card-text">Pre-pregnancy: 60.0 kg &bull; Current: 66.4 kg (Healthy IOM corridor).</p>
+          </article>
+        </div>
+
+        <!-- Row 2: Checkable Milestone Timeline (7 Required Milestones) + Hospital Bag Checklist -->
+        <div class="grid-2" style="margin-bottom:2rem;align-items:start;">
+          <section class="tilt-card" aria-labelledby="checkable-milestones-heading">
+            <span class="card-tag">Interactive Clinical Roadmap</span>
+            <h2 id="checkable-milestones-heading" style="font-size:1.45rem;margin-bottom:1rem;">Checkable Prenatal Milestones</h2>
+            <div style="width:100%;">
+              <label class="milestone-item is-completed" style="cursor:pointer;">
+                <span style="display:inline-flex;align-items:center;gap:0.75rem;">
+                  <span class="milestone-dot"></span>
+                  <input type="checkbox" data-milestone-check="dating_scan" checked style="width:18px;height:18px;accent-color:var(--plum-700);">
+                  <span><strong>1. Dating &amp; Viability Scan</strong> (Week 8)</span>
+                </span>
+                <span class="badge badge-success">Completed</span>
+              </label>
+
+              <label class="milestone-item is-completed" style="cursor:pointer;">
+                <span style="display:inline-flex;align-items:center;gap:0.75rem;">
+                  <span class="milestone-dot"></span>
+                  <input type="checkbox" data-milestone-check="nt_scan" checked style="width:18px;height:18px;accent-color:var(--plum-700);">
+                  <span><strong>2. Nuchal Translucency (NT) Scan &amp; NIPT</strong> (Week 12)</span>
+                </span>
+                <span class="badge badge-success">Completed</span>
+              </label>
+
+              <label class="milestone-item is-completed" style="cursor:pointer;">
+                <span style="display:inline-flex;align-items:center;gap:0.75rem;">
+                  <span class="milestone-dot"></span>
+                  <input type="checkbox" data-milestone-check="anomaly_scan" checked style="width:18px;height:18px;accent-color:var(--plum-700);">
+                  <span><strong>3. Detailed 20-Week Anomaly Scan</strong> (Week 20)</span>
+                </span>
+                <span class="badge badge-success">Completed</span>
+              </label>
+
+              <label class="milestone-item is-completed" style="cursor:pointer;">
+                <span style="display:inline-flex;align-items:center;gap:0.75rem;">
+                  <span class="milestone-dot"></span>
+                  <input type="checkbox" data-milestone-check="glucose_test" checked style="width:18px;height:18px;accent-color:var(--plum-700);">
+                  <span><strong>4. Oral Glucose Tolerance Test (OGTT)</strong> (Week 26)</span>
+                </span>
+                <span class="badge badge-success">Completed</span>
+              </label>
+
+              <label class="milestone-item" style="cursor:pointer;">
+                <span style="display:inline-flex;align-items:center;gap:0.75rem;">
+                  <span class="milestone-dot"></span>
+                  <input type="checkbox" data-milestone-check="tdap_vaccine" style="width:18px;height:18px;accent-color:var(--plum-700);">
+                  <span><strong>5. Tdap Whooping Cough Immunisation</strong> (Week 28)</span>
+                </span>
+                <span class="badge badge-plum">Due Nov 24</span>
+              </label>
+
+              <label class="milestone-item" style="cursor:pointer;">
+                <span style="display:inline-flex;align-items:center;gap:0.75rem;">
+                  <span class="milestone-dot"></span>
+                  <input type="checkbox" data-milestone-check="growth_scan" style="width:18px;height:18px;accent-color:var(--plum-700);">
+                  <span><strong>6. 32-Week 4D Growth &amp; Doppler Scan</strong> (Week 32)</span>
+                </span>
+                <span class="badge badge-gold">Upcoming</span>
+              </label>
+
+              <label class="milestone-item" style="cursor:pointer;">
+                <span style="display:inline-flex;align-items:center;gap:0.75rem;">
+                  <span class="milestone-dot"></span>
+                  <input type="checkbox" data-milestone-check="birth_plan" style="width:18px;height:18px;accent-color:var(--plum-700);">
+                  <span><strong>7. Final Birth Preferences &amp; Suite Tour</strong> (Week 35)</span>
+                </span>
+                <span class="badge badge-gold">Upcoming</span>
+              </label>
+            </div>
+          </section>
+
+          <!-- Hospital Bag Checklist + Kick Counter + Contraction Timer -->
+          <div style="display:flex;flex-direction:column;gap:1.5rem;">
+            <section class="tilt-card anim-heartbeat" aria-labelledby="kick-timer-heading">
+              <span class="card-tag">Fetal Movement &amp; Labour Timers</span>
+              <h2 id="kick-timer-heading" style="font-size:1.4rem;">Daily Kick Counter &amp; Contraction Timer</h2>
+              <div class="grid-2" style="width:100%;gap:1rem;margin-top:0.75rem;">
+                <div style="padding:1rem;border-radius:var(--radius-md);background:var(--rose-100);color:var(--plum-900);">
+                  <strong>Today's Kicks</strong>
+                  <p id="tracker-kick-count" style="font-family:var(--font-heading);font-size:2rem;color:var(--plum-700);margin-block:0.35rem;">6</p>
+                  <button type="button" id="tracker-kick-btn" class="btn btn-primary" style="width:100%;">Log Kick (+1)</button>
+                </div>
+                <div style="padding:1rem;border-radius:var(--radius-md);background:var(--lilac-100);color:var(--plum-900);">
+                  <strong>Contraction Timer</strong>
+                  <p id="contraction-timer-display" style="font-family:var(--font-heading);font-size:1.6rem;color:var(--plum-700);margin-block:0.45rem;">Ready</p>
+                  <button type="button" id="contraction-timer-btn" class="btn btn-secondary" style="width:100%;">Start Contraction</button>
+                </div>
+              </div>
+              <div id="contraction-log-list" style="width:100%;margin-top:1rem;"></div>
+            </section>
+
+            <section class="tilt-card" aria-labelledby="bag-check-heading">
+              <span class="card-tag">Suite Readiness</span>
+              <h3 id="bag-check-heading">Hospital Bag Readiness Checklist</h3>
+              <div style="width:100%;margin-top:0.5rem;">
+                <label class="milestone-item is-completed" style="cursor:pointer;">
+                  <span><input type="checkbox" data-milestone-check="bag_id" checked style="margin-inline-end:0.5rem;">Birth Preferences &amp; Insurance Card</span>
+                  <span class="badge badge-success">Packed</span>
+                </label>
+                <label class="milestone-item" style="cursor:pointer;">
+                  <span><input type="checkbox" data-milestone-check="bag_gowns" style="margin-inline-end:0.5rem;">Organic Nursing Gowns &amp; Swaddles</span>
+                  <span class="badge badge-gold">To Pack</span>
+                </label>
+                <label class="milestone-item" style="cursor:pointer;">
+                  <span><input type="checkbox" data-milestone-check="bag_carseat" style="margin-inline-end:0.5rem;">Rear-Facing Infant Car Seat Installed</span>
+                  <span class="badge badge-gold">To Pack</span>
+                </label>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- Row 3: Symptom & Mood Journal -->
+        <section class="tilt-card" aria-labelledby="journal-heading">
+          <span class="card-tag">Daily Reflection</span>
+          <h2 id="journal-heading" style="font-size:1.5rem;margin-bottom:0.75rem;">Symptom &amp; Mood Journal</h2>
+          <p class="card-text">Notes logged here are shared with Dr. Okafor prior to your antenatal visit.</p>
+          <form id="symptom-journal-form" style="width:100%;max-width:680px;margin-bottom:1.5rem;">
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="journal-mood" class="form-label">Today's Mood &amp; Energy</label>
+                <select id="journal-mood" class="form-control">
+                  <option value="Calm &amp; Rested">Calm &amp; Rested</option>
+                  <option value="Energetic &amp; Nesting">Energetic &amp; Nesting</option>
+                  <option value="Mild Backache / Tired">Mild Backache / Tired</option>
+                  <option value="Need Reassurance from Midwife">Need Reassurance from Midwife</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="journal-note" class="form-label">Symptoms or Questions for Your OB-GYN</label>
+                <input type="text" id="journal-note" class="form-control" placeholder="e.g., Strong kicks after dinner; mild ankle swelling in evening" required>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Journal Entry</button>
+          </form>
+
+          <div id="journal-entries-list" style="width:100%;max-width:680px;">
+            <div class="milestone-item">
+              <div><strong>Yesterday (Calm &amp; Rested)</strong><p>Slept 8 hours with pregnancy pillow; 10 kicks counted in 25 minutes after breakfast.</p></div>
+              <span class="badge badge-success">Logged</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/tilt.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/plugins/smooth-charts.js" defer></script>
+  <script src="../../assets/js/dashboard.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Replace placeholder brand name "Bloom & Cradle" with your final clinic name -->
+  <title>Portal Settings &amp; Privacy | Bloom &amp; Cradle Portal</title>
+  <meta name="description" content="Configure notifications, dark mode, RTL layout, password security, and portable medical record export in the Bloom & Cradle Patient Portal.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/rtl.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="patient-sidebar" aria-label="Patient Portal Navigation">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logo"></use></svg></span>
+        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Patient Portal</small></span>
+      </a>
+      <nav class="dashboard-sidebar__nav">
+        <a href="index.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-grid"></use></svg>Overview</a>
+        <a href="book-checkup.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-calendar"></use></svg>Book Checkup</a>
+        <a href="appointments.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-clock"></use></svg>My Appointments</a>
+        <a href="pregnancy-tracker.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-heart-pulse"></use></svg>Pregnancy Tracker</a>
+        <a href="reports.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-file-text"></use></svg>Lab &amp; Scan Reports</a>
+        <a href="messages.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-message"></use></svg>Doctor Messages</a>
+        <a href="profile.html" class="sidebar-link"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg>Health Profile</a>
+        <a href="settings.html" class="sidebar-link" aria-current="page"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-settings"></use></svg>Portal Settings</a>
+      </nav>
+      <button type="button" class="btn btn-secondary" data-logout-btn style="width:100%;">
+        <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-logout"></use></svg>Sign Out
+      </button>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="dashboard-topbar__left">
+          <button type="button" class="icon-btn mobile-menu-toggle" data-sidebar-toggle aria-controls="patient-sidebar" aria-expanded="false" aria-label="Toggle portal sidebar">
+            <svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-menu"></use></svg>
+          </button>
+          <span class="eyebrow" style="margin:0;">Account Preferences</span>
+        </div>
+        <div class="dashboard-topbar__right">
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-moon"></use></svg></button>
+          <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
+          <a href="profile.html" class="user-pill">
+            <span class="card-icon-wrap" style="width:34px;height:34px;margin:0;"><svg aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-user"></use></svg></span>
+            <span class="user-pill__name">Elena Rostova</span>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="dashboard-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Portal Overview</a>
+          <svg width="14" height="14" aria-hidden="true"><use href="../../assets/icons/icons.svg#icon-chevron-right"></use></svg>
+          <span aria-current="page">Portal Settings</span>
+        </nav>
+
+        <div style="margin-bottom:2rem;">
+          <span class="eyebrow">Preferences, Security &amp; Portability</span>
+          <h1>Portal Settings &amp; <em>Privacy Controls</em></h1>
+          <p class="lead">Customize notifications, display theme, language/RTL direction, password security, and portable medical record export.</p>
+        </div>
+
+        <div class="grid-2" style="align-items:start;">
+          <!-- Notifications, Theme & RTL/Language -->
+          <section class="tilt-card" aria-labelledby="notif-pref-heading">
+            <span class="card-tag">Display &amp; Alerts</span>
+            <h2 id="notif-pref-heading" style="font-size:1.45rem;margin-bottom:1rem;">Notifications, Theme &amp; Direction</h2>
+            <div style="width:100%;margin-bottom:1.25rem;">
+              <label class="milestone-item is-completed" style="cursor:pointer;">
+                <span>SMS Appointment &amp; Scan Reminders (24h prior)</span>
+                <input type="checkbox" checked style="width:18px;height:18px;accent-color:var(--plum-700);">
+              </label>
+              <label class="milestone-item is-completed" style="cursor:pointer;">
+                <span>Instant Lab &amp; Ultrasound Release Alerts</span>
+                <input type="checkbox" checked style="width:18px;height:18px;accent-color:var(--plum-700);">
+              </label>
+              <label class="milestone-item is-completed" style="cursor:pointer;">
+                <span>Partner Co-Access (Share Tracker With Spouse)</span>
+                <input type="checkbox" checked style="width:18px;height:18px;accent-color:var(--plum-700);">
+              </label>
+            </div>
+            <div class="btn-group" style="justify-content:center;">
+              <button type="button" class="btn btn-secondary" data-theme-toggle>Toggle Dark / Light Mode</button>
+              <button type="button" class="btn btn-secondary" data-rtl-toggle>Toggle RTL / LTR</button>
+            </div>
+          </section>
+
+          <!-- Password Change + Data Export + Logout -->
+          <div style="display:flex;flex-direction:column;gap:1.5rem;">
+            <section class="tilt-card" aria-labelledby="pass-change-heading">
+              <span class="card-tag">Account Security</span>
+              <h2 id="pass-change-heading" style="font-size:1.45rem;margin-bottom:0.75rem;">Update Portal Password</h2>
+              <form action="#" method="post" data-validate-form="password" data-success-msg="Your portal password has been updated securely." style="width:100%;">
+                <div class="form-group">
+                  <label for="set-curr-pass" class="form-label">Current Password *</label>
+                  <input type="password" id="set-curr-pass" class="form-control" value="Demo@1234" required>
+                </div>
+                <div class="form-group">
+                  <label for="set-new-pass" class="form-label">New Password *</label>
+                  <input type="password" id="set-new-pass" class="form-control" placeholder="Enter new strong password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Update Password</button>
+                <p class="form-status-box" hidden style="margin-top:0.75rem;color:var(--sage-700);font-weight:600;"></p>
+              </form>
+            </section>
+
+            <section class="tilt-card" aria-labelledby="data-export-heading">
+              <span class="card-tag">HIPAA Data Portability</span>
+              <h3 id="data-export-heading">Export Your Medical Records Archive</h3>
+              <p class="card-text">Download a portable JSON/PDF summary of your gestational chart, milestones, and diagnostic records, or sign out of this device.</p>
+              <div class="btn-group" style="justify-content:center;">
+                <button type="button" id="export-data-btn" class="btn btn-champagne">Export Health Archive</button>
+                <button type="button" class="btn btn-secondary" data-logout-btn>Sign Out of Portal</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/tilt.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/dashboard.js" defer></script>
+</body>
+</html>
