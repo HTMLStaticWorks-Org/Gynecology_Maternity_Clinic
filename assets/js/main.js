@@ -59,6 +59,63 @@
     }
 
     /* ----------------------------------------------------------------------
+       3b. MOBILE DRAWER ACTIONS & BACKDROP (Sync header actions into drawer)
+       ---------------------------------------------------------------------- */
+    const mainNav = document.querySelector('.main-nav');
+    const headerActions = document.querySelector('.site-header .header-actions');
+
+    let backdrop = document.querySelector('.nav-backdrop');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.className = 'nav-backdrop';
+      backdrop.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(backdrop);
+    }
+
+    if (mainNav && !mainNav.querySelector('.main-nav__header')) {
+      const drawerHeader = document.createElement('div');
+      drawerHeader.className = 'main-nav__header';
+      drawerHeader.innerHTML = `
+        <button type="button" class="icon-btn main-nav__close" data-nav-close aria-label="Close navigation menu">
+          <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-close"></use></svg>
+        </button>
+      `;
+      mainNav.insertBefore(drawerHeader, mainNav.firstChild);
+    }
+
+    if (mainNav && headerActions && !mainNav.querySelector('.mobile-nav-actions')) {
+      const themeBtn = headerActions.querySelector('[data-theme-toggle]');
+      const rtlBtn = headerActions.querySelector('[data-rtl-toggle]');
+      const ctaBtns = headerActions.querySelectorAll('.btn:not(.mobile-menu-toggle)');
+
+      const mobileActions = document.createElement('div');
+      mobileActions.className = 'mobile-nav-actions';
+
+      const togglesWrap = document.createElement('div');
+      togglesWrap.className = 'mobile-nav-actions__toggles';
+
+      if (themeBtn) {
+        togglesWrap.appendChild(themeBtn.cloneNode(true));
+      }
+      if (rtlBtn) {
+        togglesWrap.appendChild(rtlBtn.cloneNode(true));
+      }
+      if (togglesWrap.children.length > 0) {
+        mobileActions.appendChild(togglesWrap);
+      }
+      ctaBtns.forEach((btn) => {
+        mobileActions.appendChild(btn.cloneNode(true));
+      });
+
+      const navList = mainNav.querySelector('.main-nav__list');
+      if (navList) {
+        mainNav.insertBefore(mobileActions, navList);
+      } else {
+        mainNav.appendChild(mobileActions);
+      }
+    }
+
+    /* ----------------------------------------------------------------------
        4. THEME, RTL & LANGUAGE TOGGLES
        ---------------------------------------------------------------------- */
     function updateThemeButtons() {
@@ -66,6 +123,12 @@
       document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
         btn.setAttribute('aria-label', current === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
         btn.setAttribute('title', current === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        const iconUse = btn.querySelector('use');
+        if (iconUse) {
+          const href = iconUse.getAttribute('href') || '';
+          const base = href.includes('#') ? href.split('#')[0] : '../assets/icons/icons.svg';
+          iconUse.setAttribute('href', `${base}#${current === 'dark' ? 'icon-sun' : 'icon-moon'}`);
+        }
       });
     }
     updateThemeButtons();
@@ -99,43 +162,137 @@
       });
     });
 
-    document.querySelectorAll('[data-lang-toggle]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const langs = ['EN', 'FR', 'AR'];
-        const curr = btn.textContent.trim() || 'EN';
-        const next = langs[(langs.indexOf(curr) + 1) % langs.length];
-        btn.textContent = next;
-        if (next === 'AR') {
-          rootEl.setAttribute('dir', 'rtl');
-          localStorage.setItem('bc_dir', 'rtl');
-        } else {
-          rootEl.setAttribute('dir', 'ltr');
-          localStorage.setItem('bc_dir', 'ltr');
-        }
-        updateRtlButtons();
-        showToast(`Language preference updated to ${next}.`);
-      });
-    });
-
     /* ----------------------------------------------------------------------
-       5. MOBILE NAVIGATION DRAWER (WITH FOCUS TRAP)
+       5. MOBILE NAVIGATION DRAWER (WITH FOCUS TRAP & CLOSE CONTROLS)
        ---------------------------------------------------------------------- */
     const navToggle = document.querySelector('[data-nav-toggle]');
-    const mainNav = document.querySelector('.main-nav');
-    if (navToggle && mainNav) {
-      navToggle.addEventListener('click', () => {
-        const isOpen = mainNav.classList.toggle('is-open');
-        navToggle.setAttribute('aria-expanded', String(isOpen));
+    if (mainNav) {
+      const setNavOpen = (isOpen) => {
+        mainNav.classList.toggle('is-open', isOpen);
+        if (backdrop) backdrop.classList.toggle('is-active', isOpen);
+        document.body.classList.toggle('nav-open', isOpen);
+        if (navToggle) {
+          navToggle.setAttribute('aria-expanded', String(isOpen));
+          navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+          const iconUse = navToggle.querySelector('use');
+          if (iconUse) {
+            const href = iconUse.getAttribute('href') || '';
+            const base = href.includes('#') ? href.split('#')[0] : '../assets/icons/icons.svg';
+            iconUse.setAttribute('href', `${base}#${isOpen ? 'icon-close' : 'icon-menu'}`);
+          }
+        }
+      };
+
+      if (navToggle) {
+        navToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const willOpen = !mainNav.classList.contains('is-open');
+          setNavOpen(willOpen);
+        });
+      }
+
+      // Close button inside the drawer
+      document.querySelectorAll('[data-nav-close]').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          setNavOpen(false);
+          if (navToggle) navToggle.focus();
+        });
       });
+
+      // Clicking on the backdrop closes the drawer
+      if (backdrop) {
+        backdrop.addEventListener('click', () => {
+          setNavOpen(false);
+        });
+      }
 
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && mainNav.classList.contains('is-open')) {
-          mainNav.classList.remove('is-open');
-          navToggle.setAttribute('aria-expanded', 'false');
-          navToggle.focus();
+          setNavOpen(false);
+          if (navToggle) navToggle.focus();
         }
       });
+
+      document.addEventListener('click', (e) => {
+        if (
+          mainNav.classList.contains('is-open') &&
+          !mainNav.contains(e.target) &&
+          (!navToggle || !navToggle.contains(e.target))
+        ) {
+          setNavOpen(false);
+        }
+      });
+
+      // Closing when selecting a link inside the drawer (except dropdown triggers on mobile/touch)
+      const isTouchNav = () =>
+        window.innerWidth <= 1024 ||
+        window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+      mainNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          if (isTouchNav() && link.closest('.nav-dropdown') && link.classList.contains('main-nav__link')) {
+            return;
+          }
+          setNavOpen(false);
+        });
+      });
     }
+
+    /* ----------------------------------------------------------------------
+       5b. NAVIGATION DROPDOWNS (KEYBOARD & TOUCH ACCESSIBILITY)
+       ---------------------------------------------------------------------- */
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-dropdown__link').forEach((subLink) => {
+      const href = subLink.getAttribute('href');
+      if (href && href.split('/').pop() === currentPage && !subLink.hasAttribute('aria-current')) {
+        subLink.setAttribute('aria-current', 'page');
+      }
+    });
+
+    const navDropdowns = document.querySelectorAll('.nav-dropdown');
+    navDropdowns.forEach((dropdown) => {
+      const trigger = dropdown.querySelector('.main-nav__link');
+      if (!trigger) return;
+
+      // Mobile & touch/tablet click to toggle dropdown
+      trigger.addEventListener('click', (e) => {
+        const isTouchOrTablet =
+          window.innerWidth <= 1024 ||
+          window.matchMedia('(hover: none), (pointer: coarse)').matches;
+        if (isTouchOrTablet) {
+          e.preventDefault();
+          e.stopPropagation();
+          const wasOpen = dropdown.classList.contains('is-open');
+          navDropdowns.forEach((d) => d.classList.remove('is-open'));
+          if (!wasOpen) dropdown.classList.add('is-open');
+        }
+      });
+
+      trigger.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown' || e.key === 'Enter') {
+          dropdown.classList.add('is-open');
+          const firstSubLink = dropdown.querySelector('.nav-dropdown__link');
+          if (firstSubLink && e.key === 'ArrowDown') {
+            e.preventDefault();
+            firstSubLink.focus();
+          }
+        }
+      });
+
+      dropdown.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          dropdown.classList.remove('is-open');
+          trigger.focus();
+        }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-dropdown')) {
+        navDropdowns.forEach((d) => d.classList.remove('is-open'));
+      }
+    });
 
     /* ----------------------------------------------------------------------
        6. SCROLL REVEAL & ANIMATED STAT COUNTERS
@@ -149,7 +306,7 @@
             obs.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      }, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
       revealEls.forEach((el) => revealObs.observe(el));
     } else {
       revealEls.forEach((el) => el.classList.add('is-visible'));
@@ -250,6 +407,37 @@
         resultEl.hidden = false;
         resultEl.innerHTML = `Estimated Due Date: <strong>${edd.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</strong><br>Current Progress: <strong>Week ${weeks}, Day ${days}</strong> (${trimester})`;
       });
+    }
+
+    /* ----------------------------------------------------------------------
+       8b. SERVICES QUICKNAV ACTIVE STATE ON SCROLL
+       ---------------------------------------------------------------------- */
+    const quicknavPills = document.querySelectorAll('.quicknav-pill');
+    if (quicknavPills.length) {
+      const navSections = [];
+      quicknavPills.forEach((pill) => {
+        const hash = pill.getAttribute('href');
+        if (hash && hash.startsWith('#')) {
+          const sec = document.querySelector(hash);
+          if (sec) navSections.push({ pill, sec });
+        }
+      });
+
+      const updateQuicknav = () => {
+        const scrollPos = window.scrollY + 180;
+        let currentPill = null;
+        navSections.forEach(({ pill, sec }) => {
+          if (sec.offsetTop <= scrollPos) {
+            currentPill = pill;
+          }
+        });
+        if (currentPill) {
+          quicknavPills.forEach((p) => p.classList.remove('is-active'));
+          currentPill.classList.add('is-active');
+        }
+      };
+
+      window.addEventListener('scroll', updateQuicknav, { passive: true });
     }
 
     /* ----------------------------------------------------------------------
@@ -465,7 +653,15 @@
         if (!input) return;
         const isPass = input.type === 'password';
         input.type = isPass ? 'text' : 'password';
-        btn.textContent = isPass ? 'Hide' : 'Show';
+        const useEl = btn.querySelector('use');
+        if (useEl) {
+          const currentHref = useEl.getAttribute('href') || '';
+          const basePath = currentHref.split('#')[0];
+          useEl.setAttribute('href', `${basePath}#${isPass ? 'icon-eye-off' : 'icon-eye'}`);
+        } else {
+          btn.textContent = isPass ? 'Hide' : 'Show';
+        }
+        btn.setAttribute('aria-label', isPass ? 'Hide password' : 'Show password');
       });
     });
 
@@ -496,6 +692,7 @@
         if (formType === 'login') {
           const email = (form.querySelector('input[type="email"]')?.value || '').trim().toLowerCase();
           const role = email.includes('admin') ? 'admin' : 'patient';
+          localStorage.removeItem('bc_auth_logged_out');
           localStorage.setItem('bc_auth_session', JSON.stringify({
             email: email || 'patient@demo.com',
             name: role === 'admin' ? 'Sophia Brooks' : 'Elena Rostova',
@@ -555,6 +752,29 @@
       };
       updateTimer();
       setInterval(updateTimer, 1000);
+    }
+
+    /* ----------------------------------------------------------------------
+       15. SCROLL TO TOP BUTTON
+       ---------------------------------------------------------------------- */
+    if (!document.querySelector('.scroll-up-btn')) {
+      const scrollUpBtn = document.createElement('button');
+      scrollUpBtn.type = 'button';
+      scrollUpBtn.className = 'scroll-up-btn';
+      scrollUpBtn.setAttribute('aria-label', 'Scroll back to top');
+      scrollUpBtn.setAttribute('title', 'Back to top');
+      scrollUpBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>';
+      document.body.appendChild(scrollUpBtn);
+
+      const toggleScrollBtn = () => {
+        scrollUpBtn.classList.toggle('is-visible', window.scrollY > 320);
+      };
+      window.addEventListener('scroll', toggleScrollBtn, { passive: true });
+      toggleScrollBtn();
+
+      scrollUpBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     }
   });
 })();

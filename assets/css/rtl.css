@@ -19,8 +19,18 @@
 
 [dir="rtl"] .form-group,
 [dir="rtl"] .accordion-trigger,
+[dir="rtl"] .checklist-item,
+[dir="rtl"] .guide-highlight-item,
+[dir="rtl"] .service-dept-card,
+[dir="rtl"] .service-dept-card .card-text,
+[dir="rtl"] .service-dept-card__header h3,
 [dir="rtl"] .data-table {
   text-align: right;
+}
+
+[dir="rtl"] .service-card-footer .btn {
+  margin-right: 0;
+  margin-left: auto;
 }
 
 [dir="rtl"] .section-header,

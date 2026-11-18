@@ -12,149 +12,175 @@
   <meta property="og:description" content="Join our boutique women's health & maternity sanctuary.">
   <meta property="og:image" content="../assets/icons/favicon.svg">
   <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
-<body>
+<body style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;background:var(--bg-page);position:relative;">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <div class="emergency-strip" role="region" aria-label="Emergency and Labour Contact">
-    <div class="container emergency-strip__inner">
-      <span class="emergency-strip__badge">
-        <span class="pulse-dot" aria-hidden="true"></span>
-        24/7 Labour &amp; Maternal Triage Desk: <a href="tel:+18005550199">+1 (800) 555-0199</a>
-      </span>
-      <span>Mon–Sat: 08:00 – 20:00 &bull; Private Suites &amp; Same-Day Ultrasound</span>
+  <!-- Top Navigation Utility Bar (Theme Switcher) -->
+  <div style="position:absolute;top:1.25rem;left:1.25rem;right:1.25rem;display:flex;justify-content:flex-end;align-items:center;z-index:10;">
+    <div style="display:flex;gap:0.6rem;align-items:center;">
+      <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme">
+        <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-moon"></use></svg>
+      </button>
+      <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
     </div>
   </div>
 
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a href="index.html" class="brand-logo">
-        <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-logo"></use></svg></span>
-        <span>Bloom &amp; Cradle<small class="brand-logo__sub">Gynecology &amp; Maternity</small></span>
-      </a>
-      <nav class="main-nav" id="primary-navigation" aria-label="Primary Navigation">
-        <ul class="main-nav__list">
-          <li><a href="index.html" class="main-nav__link">Home</a></li>
-          <li><a href="services.html" class="main-nav__link">Services</a></li>
-          <li><a href="doctors.html" class="main-nav__link">Doctors</a></li>
-          <li><a href="book-appointment.html" class="main-nav__link">Book Now</a></li>
-          <li><a href="about.html" class="main-nav__link">About</a></li>
-          <li><a href="contact.html" class="main-nav__link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-moon"></use></svg></button>
-        <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
-        <button type="button" class="icon-btn" data-lang-toggle aria-label="Switch language">EN</button>
-        <a href="login.html" class="btn btn-secondary">Sign In</a>
-        <button type="button" class="icon-btn mobile-menu-toggle" data-nav-toggle aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-menu"></use></svg></button>
+  <main id="main-content" style="width:100%;padding:4.5rem 1rem 2.5rem;">
+    <div class="container" style="max-width:540px;margin-inline:auto;">
+      
+      <!-- Brand Logo Header -->
+      <div style="text-align:center;margin-bottom:1.5rem;">
+        <a href="index.html" class="brand-logo" style="display:inline-flex;align-items:center;gap:0.75rem;text-decoration:none;">
+          <span class="brand-logo__mark"><svg width="34" height="34" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-logo"></use></svg></span>
+          <span>Bloom &amp; Cradle<small class="brand-logo__sub" style="display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);font-family:var(--font-body);font-weight:600;">Gynecology &amp; Maternity</small></span>
+        </a>
       </div>
-    </div>
-  </header>
 
-  <main id="main-content">
-    <section class="section">
-      <div class="container">
-        <div class="grid-2" style="align-items:stretch;max-width:1080px;margin-inline:auto;">
-          <!-- Multi-Field Patient Registration Form -->
-          <div class="tilt-card reveal" style="padding:2.25rem;">
-            <span class="eyebrow">New Patient Onboarding</span>
-            <h1 style="font-size:2rem;margin-bottom:0.5rem;">Create Your Patient Portal Account</h1>
-            <p class="card-text">Register once to manage appointments, access your pregnancy milestone tracker, and communicate securely with your care team.</p>
+      <!-- Focused Registration Card (NO tilt animation, NO image) -->
+      <div class="card auth-card reveal" style="padding:2.35rem 2.25rem;border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);background:var(--bg-surface);border:1px solid var(--border-subtle);height:auto;">
+        <div style="text-align:center;margin-bottom:1.25rem;">
+          <span class="eyebrow" style="margin-bottom:0.25rem;display:block;">New Patient Onboarding</span>
+          <h1 style="font-size:1.9rem;margin-bottom:0.35rem;line-height:1.2;">Create Your Patient Account</h1>
+          <p class="card-text" style="font-size:0.9rem;margin-bottom:0;min-height:auto;">Register once for appointment bookings, weekly pregnancy updates, and secure records.</p>
+        </div>
 
-            <form id="register-form" action="#" method="post" data-validate-form="register" style="width:100%;">
-              <div class="grid-2">
-                <div class="form-group">
-                  <label for="reg-name" class="form-label">Full Legal Name *</label>
-                  <input type="text" id="reg-name" class="form-control" placeholder="Elena Rostova" required aria-describedby="reg-name-err" data-error-msg="Please enter your full name.">
-                  <span id="reg-name-err" class="field-error" role="alert"></span>
-                </div>
-                <div class="form-group">
-                  <label for="reg-dob" class="form-label">Date of Birth *</label>
-                  <input type="date" id="reg-dob" class="form-control" value="1995-04-12" required aria-describedby="reg-dob-err" data-error-msg="Please select your date of birth.">
-                  <span id="reg-dob-err" class="field-error" role="alert"></span>
-                </div>
-              </div>
+        <!-- Social Quick Sign Up Options -->
+        <div style="display:flex;gap:0.65rem;margin-bottom:1.15rem;">
+          <button type="button" class="social-icon-btn" style="flex:1;justify-content:center;padding:0.6rem 0.5rem;font-size:0.84rem;" aria-label="Sign up with Google">
+            <svg width="17" height="17" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-google"></use></svg>
+            <span>Google</span>
+          </button>
+          <button type="button" class="social-icon-btn" style="flex:1;justify-content:center;padding:0.6rem 0.5rem;font-size:0.84rem;" aria-label="Sign up with Apple">
+            <svg width="17" height="17" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-apple"></use></svg>
+            <span>Apple</span>
+          </button>
+          <button type="button" class="social-icon-btn" style="flex:1;justify-content:center;padding:0.6rem 0.5rem;font-size:0.84rem;" aria-label="Sign up with Facebook">
+            <svg width="17" height="17" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-facebook"></use></svg>
+            <span>Facebook</span>
+          </button>
+        </div>
 
-              <div class="grid-2">
-                <div class="form-group">
-                  <label for="reg-email" class="form-label">Email Address *</label>
-                  <input type="email" id="reg-email" class="form-control" placeholder="elena@example.com" required aria-describedby="reg-email-err" data-error-msg="Please enter a valid email address.">
-                  <span id="reg-email-err" class="field-error" role="alert"></span>
-                </div>
-                <div class="form-group">
-                  <label for="reg-phone" class="form-label">Mobile Number *</label>
-                  <input type="tel" id="reg-phone" class="form-control" placeholder="+1 (415) 555-0182" required aria-describedby="reg-phone-err" data-error-msg="Please enter your mobile number.">
-                  <span id="reg-phone-err" class="field-error" role="alert"></span>
-                </div>
-              </div>
+        <!-- Auth Divider -->
+        <div style="display:flex;align-items:center;text-align:center;margin-block:1rem 1.25rem;color:var(--text-muted);font-size:0.8rem;">
+          <span style="flex:1;border-bottom:1px solid var(--border-subtle);"></span>
+          <span style="padding-inline:0.75rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;">or register with details</span>
+          <span style="flex:1;border-bottom:1px solid var(--border-subtle);"></span>
+        </div>
 
-              <div class="grid-2">
-                <div class="form-group">
-                  <label for="reg-stage" class="form-label">Primary Care Focus</label>
-                  <select id="reg-stage" class="form-control">
-                    <option value="Pregnancy &amp; Antenatal Care">Pregnancy &amp; Antenatal Care</option>
-                    <option value="Annual Gynecology &amp; Well-Woman">Annual Gynecology &amp; Well-Woman</option>
-                    <option value="Fertility &amp; Preconception">Fertility &amp; Preconception</option>
-                    <option value="PCOS &amp; Hormone Balance">PCOS &amp; Hormone Balance</option>
-                    <option value="Perimenopause &amp; Menopause">Perimenopause &amp; Menopause</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="reg-pass" class="form-label">Create Password *</label>
-                  <input type="password" id="reg-pass" class="form-control" placeholder="Minimum 8 characters" required aria-describedby="reg-pass-err" data-error-msg="Please create a secure password.">
-                  <span id="reg-pass-err" class="field-error" role="alert"></span>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label style="display:flex;align-items:flex-start;gap:0.6rem;font-size:0.88rem;cursor:pointer;">
-                  <input type="checkbox" id="reg-consent" required aria-describedby="reg-consent-err" data-error-msg="Please accept the medical privacy & terms consent." style="width:18px;height:18px;margin-top:0.2rem;accent-color:var(--plum-700);">
-                  <span>I consent to HIPAA-aligned encrypted storage of my health records and agree to the <a href="privacy-policy.html" style="color:var(--plum-700);font-weight:600;">Privacy Policy</a> and <a href="terms.html" style="color:var(--plum-700);font-weight:600;">Terms of Care</a>.</span>
-                </label>
-                <span id="reg-consent-err" class="field-error" role="alert"></span>
-              </div>
-
-              <button type="submit" class="btn btn-primary" style="width:100%;">Complete Registration &amp; Enter Portal</button>
-            </form>
-
-            <p style="margin-top:1.25rem;font-size:0.9rem;">Already registered? <a href="login.html" style="color:var(--plum-700);font-weight:700;">Sign In Here</a></p>
+        <!-- Multi-Field Patient Registration Form -->
+        <form id="register-form" action="#" method="post" data-validate-form="register" style="width:100%;">
+          <div class="form-group">
+            <label for="reg-name" class="form-label">Full Legal Name *</label>
+            <input type="text" id="reg-name" class="form-control" placeholder="Elena Rostova" required aria-describedby="reg-name-err" data-error-msg="Please enter your full name.">
+            <span id="reg-name-err" class="field-error" role="alert"></span>
           </div>
 
-          <!-- Side Photo Card -->
-          <div class="tilt-card reveal" style="padding:1.5rem;">
-            <div class="card-media card-media--portrait" style="margin-bottom:1.25rem;">
-              <picture>
-                <source srcset="../assets/images/register-side-consultation.webp" type="image/webp">
-                <img src="../assets/images/register-side-consultation.jpg" alt="Smiling woman welcomed into a sunlit boutique consultation suite at Bloom and Cradle" width="900" height="1100" loading="lazy" decoding="async">
-              </picture>
+          <div class="form-group">
+            <label for="reg-dob" class="form-label">Date of Birth *</label>
+            <input type="date" id="reg-dob" class="form-control" value="1995-04-12" required aria-describedby="reg-dob-err" data-error-msg="Please select your date of birth.">
+            <span id="reg-dob-err" class="field-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-email" class="form-label">Email Address *</label>
+            <input type="email" id="reg-email" class="form-control" placeholder="elena@example.com" required aria-describedby="reg-email-err" data-error-msg="Please enter a valid email address.">
+            <span id="reg-email-err" class="field-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-phone" class="form-label">Mobile Number *</label>
+            <input type="tel" id="reg-phone" class="form-control" placeholder="+1 (415) 555-0182" required aria-describedby="reg-phone-err" data-error-msg="Please enter your mobile number.">
+            <span id="reg-phone-err" class="field-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-stage" class="form-label">Primary Care Focus</label>
+            <select id="reg-stage" class="form-control">
+              <option value="Pregnancy &amp; Antenatal Care">Pregnancy &amp; Antenatal Care</option>
+              <option value="Annual Gynecology &amp; Well-Woman">Annual Gynecology &amp; Well-Woman</option>
+              <option value="Fertility &amp; Preconception">Fertility &amp; Preconception</option>
+              <option value="PCOS &amp; Hormone Balance">PCOS &amp; Hormone Balance</option>
+              <option value="Perimenopause &amp; Menopause">Perimenopause &amp; Menopause</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-pass" class="form-label">Create Password *</label>
+            <div style="position:relative;">
+              <input type="password" id="reg-pass" class="form-control" placeholder="Minimum 8 characters" required aria-describedby="reg-pass-err" data-error-msg="Please create a secure password." style="padding-right:2.75rem;">
+              <button type="button" data-toggle-password="reg-pass" aria-label="Show password" style="position:absolute;right:0.75rem;top:50%;transform:translateY(-50%);background:none;border:none;padding:0.25rem;display:inline-flex;align-items:center;justify-content:center;color:var(--plum-700);cursor:pointer;">
+                <svg width="18" height="18" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-eye"></use></svg>
+              </button>
             </div>
-            <span class="card-tag">Your Private Sanctuary</span>
-            <h2>Everything Ready Before You Arrive</h2>
-            <p class="card-text">Completing your digital registration unlocks instant appointment booking, week-by-week pregnancy tracking, and direct insurance pre-verification.</p>
+            <span id="reg-pass-err" class="field-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label style="display:flex;align-items:flex-start;gap:0.6rem;font-size:0.88rem;cursor:pointer;">
+              <input type="checkbox" id="reg-consent" required aria-describedby="reg-consent-err" data-error-msg="Please accept the medical privacy & terms consent." style="width:18px;height:18px;margin-top:0.2rem;accent-color:var(--plum-700);">
+              <span>I consent to HIPAA-aligned encrypted storage of my health records and agree to the <a href="privacy-policy.html" style="color:var(--plum-700);font-weight:600;">Privacy Policy</a> and <a href="terms.html" style="color:var(--plum-700);font-weight:600;">Terms of Care</a>.</span>
+            </label>
+            <span id="reg-consent-err" class="field-error" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:0.5rem;">Complete Registration &amp; Enter Portal</button>
+        </form>
+
+        <p style="margin-top:1.25rem;text-align:center;font-size:0.9rem;">
+          Already registered? <a href="login.html" style="color:var(--plum-700);font-weight:700;">Sign In Here</a>
+        </p>
+
+        <!-- Social Community Connect Links -->
+        <div style="margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border-subtle);text-align:center;">
+          <span style="font-size:0.8rem;color:var(--text-secondary);display:block;margin-bottom:0.65rem;font-weight:600;">Connect With Bloom &amp; Cradle:</span>
+          <div style="display:flex;justify-content:center;gap:0.5rem;flex-wrap:wrap;">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" style="padding:0.4rem 0.75rem;font-size:0.8rem;" aria-label="Follow on Instagram" title="Instagram">
+              <svg width="16" height="16" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-instagram"></use></svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" style="padding:0.4rem 0.75rem;font-size:0.8rem;" aria-label="Visit Facebook" title="Facebook">
+              <svg width="16" height="16" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-facebook"></use></svg>
+              <span>Facebook</span>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" style="padding:0.4rem 0.75rem;font-size:0.8rem;" aria-label="Watch on YouTube" title="YouTube">
+              <svg width="16" height="16" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-youtube"></use></svg>
+              <span>YouTube</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" style="padding:0.4rem 0.75rem;font-size:0.8rem;" aria-label="Connect on LinkedIn" title="LinkedIn">
+              <svg width="16" height="16" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-linkedin"></use></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" style="padding:0.4rem 0.75rem;font-size:0.8rem;" aria-label="Follow on X" title="X (Twitter)">
+              <svg width="16" height="16" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-x-twitter"></use></svg>
+              <span>X</span>
+            </a>
           </div>
         </div>
+
       </div>
-    </section>
+
+      <!-- Minimal Auth Footer Note (No Full Site Footer) -->
+      <div style="margin-top:1.5rem;text-align:center;font-size:0.84rem;color:var(--text-muted);">
+        <p style="margin-bottom:0.35rem;">&copy; 2026 Bloom &amp; Cradle Women's Health &amp; Maternity Clinic.</p>
+        <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+          <a href="privacy-policy.html" style="color:var(--text-secondary);">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" style="color:var(--text-secondary);">Terms of Care</a>
+          <span>&bull;</span>
+          <a href="contact.html" style="color:var(--text-secondary);">Need Registration Help?</a>
+        </div>
+      </div>
+
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__bottom" style="padding-top:0;border:none;">
-        <p>&copy; 2026 Bloom &amp; Cradle Women's Health &amp; Maternity Clinic.</p>
-        <div style="display:flex;gap:1.25rem;flex-wrap:wrap;">
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
-          <a href="contact.html">Need Portal Help?</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../assets/js/tilt.js" defer></script>
   <script src="../assets/js/main.js" defer></script>
 </body>
 </html>

@@ -63,6 +63,15 @@
   color: var(--champagne-300);
 }
 
+.sidebar-utility-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
 .dashboard-main {
   display: flex;
   flex-direction: column;
@@ -141,6 +150,58 @@
   width: 100%;
   margin-inline: auto;
 }
+.dashboard-content > .tilt-card,
+.dashboard-content > .card {
+  height: auto;
+}
+.dashboard-content .grid-2 > *,
+.dashboard-content .grid-3 > *,
+.dashboard-content .grid-4 > * {
+  min-width: 0;
+}
+.dashboard-content input,
+.dashboard-content select,
+.dashboard-content textarea {
+  max-width: 100%;
+  min-width: 0;
+}
+.profile-layout {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.5fr);
+  align-items: start;
+}
+.dashboard-content .tilt-card .btn,
+.dashboard-content .card .btn {
+  min-width: 0;
+  max-width: 100%;
+  padding-inline: 1.15rem;
+  white-space: normal;
+  height: auto;
+  min-height: var(--btn-height);
+  max-height: none;
+  line-height: 1.25;
+  padding-block: 0.65rem;
+}
+.dashboard-content .grid-3 .tilt-card .btn,
+.dashboard-content .grid-3 .card .btn {
+  width: 100%;
+}
+.card-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+#report-preview-modal:not([hidden]) {
+  display: flex;
+}
+#report-preview-modal[hidden] {
+  display: none !important;
+}
 
 /* Pregnancy Progress Ring Widget */
 .progress-ring-wrap {
@@ -203,6 +264,34 @@
   border-radius: var(--radius-md);
   margin-bottom: 0.75rem;
   transition: all 0.25s ease;
+  text-align: start;
+  line-height: 1.45;
+}
+.milestone-item > :first-child {
+  flex: 1;
+  min-width: 0;
+  text-align: start !important;
+}
+.milestone-item > :first-child > span {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.milestone-item p,
+.milestone-item h3,
+.milestone-item h4,
+.milestone-item span:not(.badge) {
+  text-align: start !important;
+}
+.milestone-item p {
+  margin: 0.25rem 0 0 !important;
+}
+.milestone-item input[type="checkbox"] {
+  flex-shrink: 0;
+}
+.milestone-item .badge {
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-inline: 0 !important;
 }
 .milestone-item.is-completed {
   border-color: var(--sage-600);
@@ -243,6 +332,18 @@
   cursor: pointer;
   text-align: start;
   transition: all 0.2s ease;
+}
+.thread-item > div:first-child {
+  gap: 0.75rem;
+}
+.thread-item .badge {
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-inline: 0 !important;
+}
+.thread-item p {
+  text-align: start !important;
+  margin-inline: 0 !important;
 }
 .thread-item.is-active,
 .thread-item:hover {
@@ -290,15 +391,88 @@
   background: var(--plum-700);
   color: #FFFFFF;
 }
-.chat-composer {
+.chat-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.chat-header .badge {
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-inline: 0 !important;
+}
+.chat-composer,
+.chat-input-bar {
   padding: 1rem 1.25rem;
   border-top: 1px solid var(--border-subtle);
   display: flex;
   gap: 0.75rem;
   align-items: center;
 }
+.chat-composer .form-control,
+.chat-input-bar .form-control,
+.chat-composer input,
+.chat-input-bar input {
+  flex: 1;
+  min-width: 0;
+}
+.chat-composer .btn,
+.chat-input-bar .btn {
+  min-width: 110px;
+  padding-inline: 1.25rem;
+  flex-shrink: 0;
+}
 
 /* Responsive Dashboard & Mobile Stacked Table Cards */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .dashboard-content .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .dashboard-content .grid-3 {
+    gap: 1.25rem;
+  }
+  .dashboard-content .grid-3 .tilt-card,
+  .dashboard-content .grid-3 .card {
+    padding: 1.75rem 1.1rem;
+  }
+  .dashboard-content .grid-3 .tilt-card .btn,
+  .dashboard-content .grid-3 .card .btn {
+    padding-inline: 0.9rem;
+    font-size: 0.92rem;
+  }
+  .dashboard-content .milestone-item {
+    padding: 0.85rem 1rem;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+  }
+  .messages-layout {
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+  .chat-window > div:first-child {
+    gap: 0.85rem;
+    flex-wrap: wrap;
+  }
+  .chat-window > div:first-child .btn {
+    min-width: 0;
+    padding-inline: 1.1rem;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-content .tilt-card > .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 1024px) {
   .dashboard-shell {
     grid-template-columns: 1fr;
@@ -320,17 +494,105 @@
 }
 
 @media (max-width: 639.98px) {
+  .dashboard-sidebar .btn,
+  .dashboard-sidebar [data-logout-btn] {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
   .dashboard-topbar {
-    padding: 0.75rem 1rem;
+    padding: 0.65rem 0.85rem;
+    gap: 0.5rem;
+  }
+  .dashboard-topbar__left,
+  .dashboard-topbar__right {
+    gap: 0.5rem;
+    min-width: 0;
+  }
+  .dashboard-topbar__left {
+    flex: 1;
+  }
+  .dashboard-topbar .mobile-menu-toggle {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+  }
+  .dashboard-topbar .eyebrow {
+    margin: 0 !important;
+    font-size: 0.68rem;
+    padding: 0.35rem 0.65rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    text-align: start !important;
+    justify-content: flex-start !important;
+  }
+  .dashboard-topbar .user-pill {
+    padding: 0.25rem 0.65rem 0.25rem 0.25rem;
+    gap: 0.45rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .dashboard-topbar .user-pill__name {
+    font-size: 0.8rem;
+    white-space: nowrap;
   }
   .dashboard-content {
+    padding: 1.25rem 1rem 5rem;
+  }
+  .dashboard-content .grid-2 > *,
+  .dashboard-content .grid-3 > *,
+  .dashboard-content .grid-4 > * {
+    min-width: 0;
+  }
+  .card-panel {
     padding: 1.25rem 1rem;
+  }
+  .card-panel .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  .dashboard-content .tilt-card,
+  .dashboard-content .card {
+    height: auto;
+  }
+  .milestone-item {
+    padding: 0.85rem 1rem;
+    gap: 0.75rem;
   }
   .dashboard-search {
     display: none;
   }
-  .chat-composer {
+  .chat-composer,
+  .chat-input-bar {
     flex-direction: column;
+    padding: 1rem;
+  }
+  .chat-window > div:first-child {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 0.85rem;
+    padding: 1rem !important;
+    text-align: start;
+  }
+  .chat-window > div:first-child.chat-header {
+    flex-direction: row;
+    align-items: center !important;
+  }
+  .chat-window > div:first-child .btn,
+  .chat-composer .btn,
+  .chat-input-bar .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  .chat-messages {
+    padding: 1rem;
+  }
+  .chat-bubble {
+    max-width: 88%;
   }
   /* Simplify Tables to Stacked Cards on Mobile */
   .data-table thead {

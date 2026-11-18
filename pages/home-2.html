@@ -14,11 +14,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
   <link rel="preload" as="image" href="../assets/images/hero-home2-slide1-maternity.webp" type="image/webp">
-  <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
-<body class="has-mobile-bar">
+<body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- 24/7 Labour & Emergency Strip -->
@@ -48,31 +51,14 @@
       <nav class="main-nav" id="primary-navigation" aria-label="Primary Navigation">
         <ul class="main-nav__list">
           <li class="nav-dropdown">
-            <a href="home-2.html" class="main-nav__link" aria-current="page">Home</a>
+            <a href="home-2.html" class="main-nav__link" aria-current="page">Home <svg class="nav-dropdown__icon" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-chevron-down"></use></svg></a>
             <ul class="nav-dropdown__menu" aria-label="Home Variations">
               <li><a href="index.html" class="nav-dropdown__link">Home 1 — Editorial Women's Health</a></li>
-              <li><a href="home-2.html" class="nav-dropdown__link">Home 2 — Maternity Journey</a></li>
+              <li><a href="home-2.html" class="nav-dropdown__link" aria-current="page">Home 2 — Maternity Journey</a></li>
             </ul>
           </li>
           <li class="nav-dropdown">
-            <a href="services.html" class="main-nav__link">Services</a>
-            <ul class="nav-dropdown__menu">
-              <li><a href="services.html" class="nav-dropdown__link">All Clinical Services</a></li>
-              <li><a href="service-details.html" class="nav-dropdown__link">Service Details</a></li>
-              <li><a href="maternity-packages.html" class="nav-dropdown__link">Maternity Packages</a></li>
-              <li><a href="pregnancy-journey.html" class="nav-dropdown__link">Week-by-Week Journey</a></li>
-            </ul>
-          </li>
-          <li class="nav-dropdown">
-            <a href="doctors.html" class="main-nav__link">Doctors</a>
-            <ul class="nav-dropdown__menu">
-              <li><a href="doctors.html" class="nav-dropdown__link">Meet Our Specialists</a></li>
-              <li><a href="doctor-details.html" class="nav-dropdown__link">Doctor Profile</a></li>
-            </ul>
-          </li>
-          <li><a href="book-appointment.html" class="main-nav__link">Book Now</a></li>
-          <li class="nav-dropdown">
-            <a href="about.html" class="main-nav__link">About</a>
+            <a href="about.html" class="main-nav__link">About <svg class="nav-dropdown__icon" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-chevron-down"></use></svg></a>
             <ul class="nav-dropdown__menu">
               <li><a href="about.html" class="nav-dropdown__link">Our Clinic Story</a></li>
               <li><a href="gallery.html" class="nav-dropdown__link">Facility Tour Gallery</a></li>
@@ -80,6 +66,15 @@
               <li><a href="faq.html" class="nav-dropdown__link">Patient FAQ</a></li>
             </ul>
           </li>
+          <li><a href="services.html" class="main-nav__link">Services</a></li>
+          <li class="nav-dropdown">
+            <a href="doctors.html" class="main-nav__link">Doctors <svg class="nav-dropdown__icon" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-chevron-down"></use></svg></a>
+            <ul class="nav-dropdown__menu">
+              <li><a href="doctors.html" class="nav-dropdown__link">Meet Our Specialists</a></li>
+              <li><a href="doctor-details.html" class="nav-dropdown__link">Doctor Profile</a></li>
+            </ul>
+          </li>
+          <li><a href="book-appointment.html" class="main-nav__link">Book Now</a></li>
           <li><a href="contact.html" class="main-nav__link">Contact</a></li>
         </ul>
       </nav>
@@ -89,8 +84,8 @@
           <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-moon"></use></svg>
         </button>
         <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
-        <button type="button" class="icon-btn" data-lang-toggle aria-label="Switch language">EN</button>
-        <a href="login.html" class="btn btn-primary">Patient Portal</a>
+        <a href="login.html" class="btn btn-secondary">Login</a>
+        <a href="dashboard/index.html" class="btn btn-primary">Dashboard</a>
         <button type="button" class="icon-btn mobile-menu-toggle" data-nav-toggle aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">
           <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-menu"></use></svg>
         </button>
@@ -177,10 +172,10 @@
     <!-- ====================================================================
          SECTION 1 (HOME 2 ONLY): ANIMATED STAT COUNTERS BAND
          ==================================================================== -->
-    <section class="section section-plum" aria-label="Maternity Impact Statistics">
+    <section class="section section-plum stat-counters-section" aria-label="Maternity Impact Statistics">
       <div class="container">
-        <div class="grid-4 reveal">
-          <article class="tilt-card" style="background:rgba(255,245,243,0.08);border-color:rgba(233,207,160,0.3);">
+        <div class="grid-4 reveal stat-counters-grid">
+          <article class="tilt-card stat-counter-card" style="background:rgba(255,245,243,0.08);border-color:rgba(233,207,160,0.3);">
             <div class="card-icon-wrap">
               <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-baby"></use></svg>
             </div>
@@ -189,7 +184,7 @@
             <p class="card-text" style="color:var(--rose-100);">Babies welcomed into loving arms inside our private suites.</p>
           </article>
 
-          <article class="tilt-card" style="background:rgba(255,245,243,0.08);border-color:rgba(233,207,160,0.3);">
+          <article class="tilt-card stat-counter-card" style="background:rgba(255,245,243,0.08);border-color:rgba(233,207,160,0.3);">
             <div class="card-icon-wrap">
               <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-award"></use></svg>
             </div>
@@ -198,7 +193,7 @@
             <p class="card-text" style="color:var(--rose-100);">Dedicated exclusively to holistic women's and maternal care.</p>
           </article>
 
-          <article class="tilt-card" style="background:rgba(255,245,243,0.08);border-color:rgba(233,207,160,0.3);">
+          <article class="tilt-card stat-counter-card" style="background:rgba(255,245,243,0.08);border-color:rgba(233,207,160,0.3);">
             <div class="card-icon-wrap">
               <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-stethoscope"></use></svg>
             </div>
@@ -207,7 +202,7 @@
             <p class="card-text" style="color:var(--rose-100);">OB-GYNs, fetal medicine doctors, midwives, and IBCLC lactation leads.</p>
           </article>
 
-          <article class="tilt-card" style="background:rgba(255,245,243,0.08);border-color:rgba(233,207,160,0.3);">
+          <article class="tilt-card stat-counter-card" style="background:rgba(255,245,243,0.08);border-color:rgba(233,207,160,0.3);">
             <div class="card-icon-wrap">
               <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-shield-check"></use></svg>
             </div>
@@ -230,42 +225,75 @@
           <p>Select a trimester below to explore the scans, nutritional milestones, and emotional support we provide at each stage.</p>
         </div>
 
-        <div class="tabs-nav reveal" role="tablist" aria-label="Pregnancy Trimesters">
+        <div class="tabs-nav tabs-nav--equal reveal" role="tablist" aria-label="Pregnancy Trimesters">
           <button type="button" class="tab-btn is-active" role="tab" aria-selected="true" data-tab-target="tri-panel-1">First Trimester (Weeks 1–13)</button>
           <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-target="tri-panel-2">Second Trimester (Weeks 14–27)</button>
           <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-target="tri-panel-3">Third Trimester (Weeks 28–40)</button>
         </div>
 
         <div id="tri-panel-1" class="tab-panel is-active">
-          <div class="grid-2" style="align-items:center;">
-            <div class="tilt-card">
-              <div class="card-media">
+          <div class="grid-2 trimester-grid">
+            <div class="tilt-card trimester-card">
+              <div class="card-media trimester-media">
                 <picture>
                   <source srcset="../assets/images/home2-trimester-first.webp" type="image/webp">
-                  <img src="../assets/images/home2-trimester-first.jpg" alt="Woman in early pregnancy holding warm herbal tea beside her prenatal journal" width="960" height="720" loading="lazy" decoding="async">
+                  <img src="../assets/images/home2-trimester-first.jpg" alt="Smiling woman in early pregnancy gently resting her hands on her baby bump in natural sunlight" width="960" height="720" loading="lazy" decoding="async">
                 </picture>
               </div>
               <span class="card-tag">Weeks 1 to 13</span>
               <h3>Foundation, Reassurance &amp; Early Viability</h3>
               <p class="card-text">Early viability &amp; dating ultrasound (weeks 7–8), non-invasive prenatal genetic testing (NIPT), nuchal translucency (NT) scan at 12 weeks, and gentle nausea &amp; micronutrient support.</p>
-              <a href="pregnancy-journey.html" class="btn btn-primary">Explore Weeks 1–13</a>
+              <div class="trimester-card-footer">
+                <a href="pregnancy-journey.html" class="btn btn-primary">Explore Weeks 1–13</a>
+              </div>
             </div>
-            <div class="tilt-card anim-heartbeat">
+            <div class="tilt-card anim-heartbeat trimester-card trimester-card--checklist">
               <div class="card-icon-wrap">
                 <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-heart-pulse"></use></svg>
               </div>
               <span class="card-tag">First Trimester Checklist</span>
               <h3>Key Clinical Milestones</h3>
-              <p class="card-text">1. Comprehensive maternal booking blood panel &amp; thyroid check.<br>2. 8-Week heartbeat confirmation &amp; dating ultrasound.<br>3. 11–13 Week NT scan &amp; cell-free DNA screening.<br>4. One-on-one maternal nutritionist onboarding.</p>
-              <a href="book-appointment.html" class="btn btn-secondary">Book First Prenatal Visit</a>
+              <ul class="trimester-checklist" role="list">
+                <li class="checklist-item">
+                  <span class="checklist-step">01</span>
+                  <div class="checklist-content">
+                    <strong class="checklist-title">Booking Labs &amp; Thyroid Panel</strong>
+                    <span class="checklist-desc">Comprehensive maternal blood panel, hCG baseline &amp; thyroid assessment.</span>
+                  </div>
+                </li>
+                <li class="checklist-item">
+                  <span class="checklist-step">02</span>
+                  <div class="checklist-content">
+                    <strong class="checklist-title">8-Week Heartbeat Ultrasound</strong>
+                    <span class="checklist-desc">Early viability dating scan confirming gestational age &amp; cardiac flicker.</span>
+                  </div>
+                </li>
+                <li class="checklist-item">
+                  <span class="checklist-step">03</span>
+                  <div class="checklist-content">
+                    <strong class="checklist-title">11–13 Week NT Scan &amp; NIPT</strong>
+                    <span class="checklist-desc">Nuchal translucency scan &amp; non-invasive cell-free DNA genetic screening.</span>
+                  </div>
+                </li>
+                <li class="checklist-item">
+                  <span class="checklist-step">04</span>
+                  <div class="checklist-content">
+                    <strong class="checklist-title">Maternal Nutrition Onboarding</strong>
+                    <span class="checklist-desc">One-on-one dietitian consultation for nausea relief and prenatal vitality.</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="trimester-card-footer">
+                <a href="book-appointment.html" class="btn btn-secondary">Book First Prenatal Visit</a>
+              </div>
             </div>
           </div>
         </div>
 
         <div id="tri-panel-2" class="tab-panel">
-          <div class="grid-2" style="align-items:center;">
-            <div class="tilt-card">
-              <div class="card-media">
+          <div class="grid-2 trimester-grid">
+            <div class="tilt-card trimester-card">
+              <div class="card-media trimester-media">
                 <picture>
                   <source srcset="../assets/images/home2-trimester-second.webp" type="image/webp">
                   <img src="../assets/images/home2-trimester-second.jpg" alt="Pregnant woman practicing gentle prenatal yoga in a sunlit studio" width="960" height="720" loading="lazy" decoding="async">
@@ -274,24 +302,57 @@
               <span class="card-tag">Weeks 14 to 27</span>
               <h3>The Golden Glow &amp; Detailed Anatomy Mapping</h3>
               <p class="card-text">High-definition 20-week fetal anatomy &amp; echocardiography scan, gestational glucose tolerance screening, pelvic floor physiotherapy, and prenatal movement classes.</p>
-              <a href="pregnancy-journey.html" class="btn btn-primary">Explore Weeks 14–27</a>
+              <div class="trimester-card-footer">
+                <a href="pregnancy-journey.html" class="btn btn-primary">Explore Weeks 14–27</a>
+              </div>
             </div>
-            <div class="tilt-card anim-breathe">
+            <div class="tilt-card anim-breathe trimester-card trimester-card--checklist">
               <div class="card-icon-wrap">
                 <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-sparkles"></use></svg>
               </div>
               <span class="card-tag">Second Trimester Checklist</span>
               <h3>Key Clinical Milestones</h3>
-              <p class="card-text">1. 19–21 Week high-resolution fetal anomaly scan.<br>2. Cervical length &amp; uterine artery Doppler assessment.<br>3. 24–28 Week oral glucose screening &amp; iron replenishment.<br>4. Begin prenatal yoga &amp; partner birth workshops.</p>
-              <a href="book-appointment.html" class="btn btn-secondary">Schedule Anomaly Scan</a>
+              <ul class="trimester-checklist" role="list">
+                <li class="checklist-item">
+                  <span class="checklist-step">01</span>
+                  <div class="checklist-content">
+                    <strong class="checklist-title">19–21 Week Detailed Anomaly Scan</strong>
+                    <span class="checklist-desc">High-resolution fetal anatomy ultrasound &amp; cardiac echocardiography.</span>
+                  </div>
+                </li>
+                <li class="checklist-item">
+                  <span class="checklist-step">02</span>
+                  <div class="checklist-content">
+                    <strong class="checklist-title">Cervical &amp; Uterine Doppler</strong>
+                    <span class="checklist-desc">Cervical length surveillance and placental blood flow hemodynamics.</span>
+                  </div>
+                </li>
+                <li class="checklist-item">
+                  <span class="checklist-step">03</span>
+                  <div class="checklist-content">
+                    <strong class="checklist-title">24–28 Week Glucose Screening</strong>
+                    <span class="checklist-desc">Oral glucose tolerance test (OGTT) and proactive iron replenishment.</span>
+                  </div>
+                </li>
+                <li class="checklist-item">
+                  <span class="checklist-step">04</span>
+                  <div class="checklist-content">
+                    <strong class="checklist-title">Pelvic Floor &amp; Birth Preparation</strong>
+                    <span class="checklist-desc">Gentle prenatal movement classes and hands-on partner birth workshops.</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="trimester-card-footer">
+                <a href="book-appointment.html" class="btn btn-secondary">Schedule Anomaly Scan</a>
+              </div>
             </div>
           </div>
         </div>
 
         <div id="tri-panel-3" class="tab-panel">
-          <div class="grid-2" style="align-items:center;">
-            <div class="tilt-card">
-              <div class="card-media">
+          <div class="grid-2 trimester-grid">
+            <div class="tilt-card trimester-card">
+              <div class="card-media trimester-media">
                 <picture>
                   <source srcset="../assets/images/home2-trimester-third.webp" type="image/webp">
                   <img src="../assets/images/home2-trimester-third.jpg" alt="Expectant couple preparing baby clothes and nursery bassinet" width="960" height="720" loading="lazy" decoding="async">
@@ -300,16 +361,49 @@
               <span class="card-tag">Weeks 28 to 40</span>
               <h3>Birth Preparation, Growth Scans &amp; Nesting</h3>
               <p class="card-text">Serial fetal growth &amp; Doppler wellbeing scans, personalized birth preference walk-through with your midwife, obstetric anesthesiologist meet-and-greet, and 36-week weekly checkups.</p>
-              <a href="pregnancy-journey.html" class="btn btn-primary">Explore Weeks 28–40</a>
+              <div class="trimester-card-footer">
+                <a href="pregnancy-journey.html" class="btn btn-primary">Explore Weeks 28–40</a>
+              </div>
             </div>
-            <div class="tilt-card anim-heartbeat">
+            <div class="tilt-card anim-heartbeat trimester-card trimester-card--checklist">
               <div class="card-icon-wrap">
                 <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-baby"></use></svg>
               </div>
               <span class="card-tag">Third Trimester Checklist</span>
               <h3>Key Clinical Milestones</h3>
-              <p class="card-text">1. 28 &amp; 32 Week 4D growth &amp; fetal wellbeing scans.<br>2. Tdap &amp; RSV maternal immunisation protection.<br>3. 36-Week Group B Strep (GBS) screening &amp; birth plan review.<br>4. Private birthing suite orientation &amp; lactation prep.</p>
-              <a href="book-appointment.html" class="btn btn-secondary">Book Birth Plan Review</a>
+              <ul class="trimester-checklist" role="list">
+                <li class="checklist-item">
+                  <span class="checklist-step">01</span>
+                  <div class="checklist-content">
+                    <strong class="checklist-title">28 &amp; 32-Week 4D Growth Scans</strong>
+                    <span class="checklist-desc">Serial fetal growth tracking, amniotic fluid and Doppler wellbeing checks.</span>
+                  </div>
+                </li>
+                <li class="checklist-item">
+                  <span class="checklist-step">02</span>
+                  <div class="checklist-content">
+                    <strong class="checklist-title">Maternal Immunisation Protection</strong>
+                    <span class="checklist-desc">Tdap and RSV maternal immunisations safeguarding infant antibody transfer.</span>
+                  </div>
+                </li>
+                <li class="checklist-item">
+                  <span class="checklist-step">03</span>
+                  <div class="checklist-content">
+                    <strong class="checklist-title">36-Week GBS &amp; Birth Plan Review</strong>
+                    <span class="checklist-desc">Group B Strep screening and 1-on-1 labor preferences with lead midwife.</span>
+                  </div>
+                </li>
+                <li class="checklist-item">
+                  <span class="checklist-step">04</span>
+                  <div class="checklist-content">
+                    <strong class="checklist-title">Sanctuary Suite Orientation</strong>
+                    <span class="checklist-desc">Private birthing suite walk-through, anesthesiologist chat &amp; lactation prep.</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="trimester-card-footer">
+                <a href="book-appointment.html" class="btn btn-secondary">Book Birth Plan Review</a>
+              </div>
             </div>
           </div>
         </div>
@@ -372,9 +466,9 @@
     </section>
 
     <!-- ====================================================================
-         SECTION 4 (HOME 2 ONLY): "BIRTH YOUR WAY" OPTIONS (5 Birth Pathways)
+         SECTION 4 (HOME 2 ONLY): "BIRTH YOUR WAY" OPTIONS (Empowered Choices)
          ==================================================================== -->
-    <section class="section" aria-labelledby="birth-options-heading">
+    <section class="section birth-options-section" aria-labelledby="birth-options-heading">
       <div class="container">
         <div class="section-header reveal">
           <span class="eyebrow">Empowered Choices</span>
@@ -382,7 +476,7 @@
           <p>Whether you envision an unmedicated water birth or a calm, family-centered gentle cesarean, your birth preferences lead our clinical team.</p>
         </div>
 
-        <div class="grid-3 reveal">
+        <div class="grid-3 reveal birth-options-grid">
           <article class="tilt-card anim-breathe">
             <div class="card-icon-wrap">
               <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-heart"></use></svg>
@@ -529,7 +623,7 @@
             <span class="card-tag">Water Birth Suite</span>
             <h3>"Calm, Sacred &amp; Deeply Empowering"</h3>
             <p class="card-text">"Giving birth to our daughter in the Blossom Suite felt like being in a warm candlelit spa while knowing an entire specialist team was right outside the door."</p>
-            <strong style="margin-top:auto;color:var(--plum-700);">Maya &amp; Rohan K. &bull; First-Time Parents</strong>
+            <strong class="card-author" style="margin-top:auto;">Maya &amp; Rohan K. &bull; First-Time Parents</strong>
           </article>
 
           <article class="tilt-card">
@@ -549,7 +643,7 @@
             <span class="card-tag">High-Risk Twin Care</span>
             <h3>"Unmatched Maternal-Fetal Expertise"</h3>
             <p class="card-text">"When our twin pregnancy needed close Doppler monitoring, Dr. Lindqvist and the fetal medicine team reassured us at every scan. Our boys arrived healthy at 37 weeks."</p>
-            <strong style="margin-top:auto;color:var(--plum-700);">Brianna &amp; Marcus T. &bull; Twin Delivery</strong>
+            <strong class="card-author" style="margin-top:auto;">Brianna &amp; Marcus T. &bull; Twin Delivery</strong>
           </article>
 
           <article class="tilt-card">
@@ -569,7 +663,7 @@
             <span class="card-tag">IVF to Cradle</span>
             <h3>"After 4 Years Waiting, Our Miracle Arrived"</h3>
             <p class="card-text">"Having our fertility specialist, OB-GYN, and lactation consultant under one roof meant we never felt like a chart number. Forever grateful to Bloom &amp; Cradle."</p>
-            <strong style="margin-top:auto;color:var(--plum-700);">Claire &amp; Julien M. &bull; Fertility &amp; Birth</strong>
+            <strong class="card-author" style="margin-top:auto;">Claire &amp; Julien M. &bull; Fertility &amp; Birth</strong>
           </article>
         </div>
       </div>
@@ -589,11 +683,38 @@
             <span class="card-tag">Complimentary Guide</span>
             <h3>Download Our First-30-Days Newborn &amp; Hospital Bag Checklist</h3>
             <p class="card-text">Curated by our lead neonatologist and midwives: everything you actually need for labour, postpartum comfort, and your baby's first month home.</p>
+            <ul class="guide-highlights" role="list">
+              <li class="guide-highlight-item">
+                <svg aria-hidden="true" class="guide-highlight-icon"><use href="../assets/icons/icons.svg#icon-check"></use></svg>
+                <div>
+                  <strong>Labour Suite Essentials:</strong>
+                  <span>Birth preferences, maternity comfort wear &amp; admission paperwork.</span>
+                </div>
+              </li>
+              <li class="guide-highlight-item">
+                <svg aria-hidden="true" class="guide-highlight-icon"><use href="../assets/icons/icons.svg#icon-check"></use></svg>
+                <div>
+                  <strong>Newborn Arrival Essentials:</strong>
+                  <span>Organic swaddles, gentle cord care, car seat checklist &amp; feeding essentials.</span>
+                </div>
+              </li>
+              <li class="guide-highlight-item">
+                <svg aria-hidden="true" class="guide-highlight-icon"><use href="../assets/icons/icons.svg#icon-check"></use></svg>
+                <div>
+                  <strong>Postpartum Recovery Pack:</strong>
+                  <span>Midwife-approved botanicals, lactation teas &amp; pelvic rest guidelines.</span>
+                </div>
+              </li>
+            </ul>
+            <div class="guide-badge-meta">
+              <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-shield-check"></use></svg>
+              <span>Instant Free Download &bull; Printable 4-Page PDF</span>
+            </div>
             <!-- TODO: Replace with actual PDF guide path -->
-            <a href="pregnancy-journey.html#hospital-bag" class="btn btn-secondary">View &amp; Download Checklist</a>
+            <a href="pregnancy-journey.html#hospital-bag" class="btn btn-secondary" style="margin-top:auto;">View &amp; Download Checklist</a>
           </div>
 
-          <div class="tilt-card">
+          <div class="tilt-card" style="justify-content:center;">
             <div class="card-icon-wrap">
               <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-mail"></use></svg>
             </div>
@@ -646,7 +767,7 @@
             <span class="brand-logo__mark">
               <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-logo"></use></svg>
             </span>
-            <span>Bloom &amp; Cradle</span>
+            <span>Bloom &amp; Cradle<small class="brand-logo__sub">Gynecology &amp; Maternity</small></span>
           </a>
           <p style="margin-bottom:1rem;">A boutique sanctuary for women's health, fertility, prenatal diagnostics, and family-centered maternity care.</p>
           <p><strong>Privacy &amp; Confidentiality:</strong> All patient records are protected under strict medical privacy and HIPAA-aligned data protection standards.</p>
@@ -699,10 +820,6 @@
       </div>
     </div>
   </footer>
-
-  <div class="mobile-sticky-bar">
-    <a href="book-appointment.html" class="btn btn-primary">Book Appointment Now</a>
-  </div>
 
   <script src="../assets/js/tilt.js" defer></script>
   <script src="../assets/js/main.js" defer></script>

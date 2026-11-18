@@ -53,9 +53,9 @@
         e.preventDefault();
         localStorage.removeItem('bc_auth_session');
         localStorage.setItem('bc_auth_logged_out', 'true');
-        toast('Signed out securely. Redirecting to login...');
+        toast('Signed out securely. Redirecting to home...');
         setTimeout(() => {
-          window.location.href = '../login.html';
+          window.location.href = '../index.html';
         }, 450);
       });
     });
@@ -240,6 +240,12 @@
     if (reportModalClose && reportModal) {
       reportModalClose.addEventListener('click', () => {
         reportModal.hidden = true;
+      });
+      reportModal.addEventListener('click', (e) => {
+        if (e.target === reportModal) reportModal.hidden = true;
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !reportModal.hidden) reportModal.hidden = true;
       });
     }
 

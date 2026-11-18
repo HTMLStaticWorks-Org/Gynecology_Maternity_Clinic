@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -12,11 +12,14 @@
   <meta property="og:description" content="Comprehensive obstetrics, fetal diagnostics, reproductive endocrinology, and minimally invasive gynecology.">
   <meta property="og:image" content="../assets/icons/favicon.svg">
   <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
-  <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
-<body class="has-mobile-bar">
+<body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div class="emergency-strip" role="region" aria-label="Emergency and Labour Contact">
@@ -25,7 +28,7 @@
         <span class="pulse-dot" aria-hidden="true"></span>
         24/7 Labour &amp; Maternal Triage Desk: <a href="tel:+18005550199">+1 (800) 555-0199</a>
       </span>
-      <span>Mon–Sat: 08:00 – 20:00 &bull; Private Suites &amp; Same-Day Ultrasound</span>
+      <span>Monâ€“Sat: 08:00 â€“ 20:00 &bull; Private Suites &amp; Same-Day Ultrasound</span>
     </div>
   </div>
 
@@ -38,31 +41,14 @@
       <nav class="main-nav" id="primary-navigation" aria-label="Primary Navigation">
         <ul class="main-nav__list">
           <li class="nav-dropdown">
-            <a href="index.html" class="main-nav__link">Home</a>
+            <a href="index.html" class="main-nav__link">Home <svg class="nav-dropdown__icon" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-chevron-down"></use></svg></a>
             <ul class="nav-dropdown__menu">
-              <li><a href="index.html" class="nav-dropdown__link">Home 1 — Editorial Women's Health</a></li>
-              <li><a href="home-2.html" class="nav-dropdown__link">Home 2 — Maternity Journey</a></li>
+              <li><a href="index.html" class="nav-dropdown__link">Home 1 â€” Editorial Women's Health</a></li>
+              <li><a href="home-2.html" class="nav-dropdown__link">Home 2 â€” Maternity Journey</a></li>
             </ul>
           </li>
           <li class="nav-dropdown">
-            <a href="services.html" class="main-nav__link" aria-current="page">Services</a>
-            <ul class="nav-dropdown__menu">
-              <li><a href="services.html" class="nav-dropdown__link">All Clinical Services</a></li>
-              <li><a href="service-details.html" class="nav-dropdown__link">Service Details</a></li>
-              <li><a href="maternity-packages.html" class="nav-dropdown__link">Maternity Packages</a></li>
-              <li><a href="pregnancy-journey.html" class="nav-dropdown__link">Week-by-Week Journey</a></li>
-            </ul>
-          </li>
-          <li class="nav-dropdown">
-            <a href="doctors.html" class="main-nav__link">Doctors</a>
-            <ul class="nav-dropdown__menu">
-              <li><a href="doctors.html" class="nav-dropdown__link">Meet Our Specialists</a></li>
-              <li><a href="doctor-details.html" class="nav-dropdown__link">Doctor Profile</a></li>
-            </ul>
-          </li>
-          <li><a href="book-appointment.html" class="main-nav__link">Book Now</a></li>
-          <li class="nav-dropdown">
-            <a href="about.html" class="main-nav__link">About</a>
+            <a href="about.html" class="main-nav__link">About <svg class="nav-dropdown__icon" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-chevron-down"></use></svg></a>
             <ul class="nav-dropdown__menu">
               <li><a href="about.html" class="nav-dropdown__link">Our Clinic Story</a></li>
               <li><a href="gallery.html" class="nav-dropdown__link">Facility Tour Gallery</a></li>
@@ -70,14 +56,23 @@
               <li><a href="faq.html" class="nav-dropdown__link">Patient FAQ</a></li>
             </ul>
           </li>
+          <li><a href="services.html" class="main-nav__link" aria-current="page">Services</a></li>
+          <li class="nav-dropdown">
+            <a href="doctors.html" class="main-nav__link">Doctors <svg class="nav-dropdown__icon" aria-hidden="true"><use href="../assets/icons/icons.svg#icon-chevron-down"></use></svg></a>
+            <ul class="nav-dropdown__menu">
+              <li><a href="doctors.html" class="nav-dropdown__link">Meet Our Specialists</a></li>
+              <li><a href="doctor-details.html" class="nav-dropdown__link">Doctor Profile</a></li>
+            </ul>
+          </li>
+          <li><a href="book-appointment.html" class="main-nav__link">Book Now</a></li>
           <li><a href="contact.html" class="main-nav__link">Contact</a></li>
         </ul>
       </nav>
       <div class="header-actions">
         <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark or light theme"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-moon"></use></svg></button>
         <button type="button" class="icon-btn" data-rtl-toggle aria-label="Toggle Right to Left layout">RTL</button>
-        <button type="button" class="icon-btn" data-lang-toggle aria-label="Switch language">EN</button>
-        <a href="login.html" class="btn btn-primary">Patient Portal</a>
+        <a href="login.html" class="btn btn-secondary">Login</a>
+        <a href="dashboard/index.html" class="btn btn-primary">Dashboard</a>
         <button type="button" class="icon-btn mobile-menu-toggle" data-nav-toggle aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-menu"></use></svg></button>
       </div>
     </div>
@@ -97,155 +92,362 @@
       </div>
     </section>
 
-    <!-- 1 & 2. SERVICE CATEGORY FILTER TABS + FULL 14-SERVICE GRID -->
-    <section class="section" aria-labelledby="services-grid-heading">
+    <!-- STICKY CLINICAL DEPARTMENT NAVIGATION -->
+    <nav class="services-quicknav" aria-label="Department sections navigation">
+      <div class="container">
+        <div class="quicknav-pills">
+          <a href="#maternity" class="quicknav-pill is-active">
+            <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-baby"></use></svg>
+            <span>Maternity &amp; Obstetrics</span>
+          </a>
+          <a href="#diagnostics" class="quicknav-pill">
+            <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-activity"></use></svg>
+            <span>Fetal Screening &amp; Imaging</span>
+          </a>
+          <a href="#fertility" class="quicknav-pill">
+            <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-sparkles"></use></svg>
+            <span>Fertility &amp; Hormones</span>
+          </a>
+          <a href="#gynecology" class="quicknav-pill">
+            <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-shield-check"></use></svg>
+            <span>Preventive Gynecology</span>
+          </a>
+          <a href="#packages" class="quicknav-pill">
+            <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-heart"></use></svg>
+            <span>Maternity Packages</span>
+          </a>
+          <a href="#methodology" class="quicknav-pill">
+            <svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-stethoscope"></use></svg>
+            <span>Methodology &amp; Pricing</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ====================================================================
+         SECTION 1: MATERNITY & OBSTETRICS CARE
+         ==================================================================== -->
+    <section id="maternity" class="section" aria-labelledby="dept-maternity-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="eyebrow">Filter by Department</span>
-          <h2 id="services-grid-heading">Explore Our Clinical Specialties</h2>
-          <p>Select a category below to filter our 14 core clinical services.</p>
+          <span class="eyebrow">Department of Obstetrics</span>
+          <h2 id="dept-maternity-heading">Maternity &amp; Obstetric Care</h2>
+          <p>From positive test to postnatal restoration, our named midwife and OB-GYN teams provide unhurried, evidence-based prenatal journeys inside calm private suites.</p>
         </div>
 
-        <div class="tabs-nav reveal" data-filter-group="full-services-grid" role="toolbar" aria-label="Filter clinical services">
-          <button type="button" class="tab-btn is-active" data-filter="all">All 14 Services</button>
-          <button type="button" class="tab-btn" data-filter="maternity">Maternity &amp; Obstetrics</button>
-          <button type="button" class="tab-btn" data-filter="diagnostics">Fetal Screening &amp; Imaging</button>
-          <button type="button" class="tab-btn" data-filter="fertility">Fertility &amp; Hormones</button>
-          <button type="button" class="tab-btn" data-filter="gynecology">Preventive &amp; Surgical Gynecology</button>
-        </div>
-
-        <div id="full-services-grid" class="grid-3 reveal">
-          <!-- 1. Antenatal care -->
-          <article class="tilt-card anim-heartbeat" data-category="maternity">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-heart-pulse"></use></svg></div>
-            <span class="card-tag">Maternity</span>
-            <h3>Antenatal Care</h3>
-            <p class="card-text">Continuity-led prenatal consultations from week 6 to birth, monitoring maternal blood pressure, fetal growth, nutrition, and emotional readiness.</p>
-            <a href="service-details.html" class="btn btn-secondary">View Service Details</a>
+        <div class="grid-2 reveal" style="gap:2rem;">
+          <!-- 1. Antenatal Care -->
+          <article class="tilt-card service-dept-card anim-heartbeat">
+            <div class="service-dept-card__header">
+              <div>
+                <span class="card-tag">Weeks 6 to 40</span>
+                <h3>Continuity Antenatal Care</h3>
+              </div>
+            </div>
+            <p class="card-text">Comprehensive consultations with your named specialist. Regular monitoring of fetal growth velocity, maternal hemodynamics, routine gestational blood panels, and emotional readiness.</p>
+            <ul class="service-feature-list">
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> 30â€“45 minute unhurried consultations</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> On-site blood draw &amp; point-of-care urine analysis</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Direct portal messaging with your lead midwife</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-primary">Book Antenatal Visit</a>
+            </div>
           </article>
 
-          <!-- 2. Prenatal screening -->
-          <article class="tilt-card anim-heartbeat" data-category="diagnostics maternity">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-microscope"></use></svg></div>
-            <span class="card-tag">Fetal Genetics</span>
-            <h3>Prenatal Screening &amp; NIPT</h3>
-            <p class="card-text">Cell-free fetal DNA (NIPT) from 10 weeks, combined first-trimester screening, carrier panels, and empathetic genetic counselling.</p>
-            <a href="service-details.html" class="btn btn-secondary">View Service Details</a>
+          <!-- 2. High-Risk Pregnancy Care -->
+          <article class="tilt-card service-dept-card anim-heartbeat">
+            <div class="service-dept-card__header">
+              <div>
+                <span class="card-tag">MFM Specialist Lead</span>
+                <h3>High-Risk Pregnancy &amp; Multiples</h3>
+              </div>
+            </div>
+            <p class="card-text">Specialist co-management for twin/triplet pregnancies, gestational diabetes, hypertensive disorders, preeclampsia surveillance, thrombophilia, and advanced maternal age.</p>
+            <ul class="service-feature-list">
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Bi-weekly Doppler &amp; cervical length surveillance</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Dedicated maternal endocrinology protocols</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Level-III NICU collaboration &amp; 24/7 on-call triage</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-secondary">Request MFM Consultation</a>
+            </div>
           </article>
 
-          <!-- 3. Ultrasound & Doppler -->
-          <article class="tilt-card anim-heartbeat" data-category="diagnostics">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-activity"></use></svg></div>
-            <span class="card-tag">4D Imaging</span>
-            <h3>Ultrasound &amp; Fetal Doppler</h3>
-            <p class="card-text">High-definition 3D/4D obstetrical scans, 20-week detailed anomaly mapping, fetal echocardiography, and uterine artery Doppler studies.</p>
-            <a href="service-details.html" class="btn btn-primary">Explore Ultrasound</a>
+          <!-- 3. Normal & Gentle Delivery -->
+          <article class="tilt-card service-dept-card anim-breathe">
+            <div class="service-dept-card__header">
+              <div>
+                <span class="card-tag">Labour Sanctuary</span>
+                <h3>Normal, Water &amp; Gentle C-Section</h3>
+              </div>
+            </div>
+            <p class="card-text">Boutique birthing suites supporting physiological unmedicated birth, hydrotherapy water-birth pools, partner-supported VBAC, and gentle family-centered cesarean birth.</p>
+            <ul class="service-feature-list">
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Private acoustic-insulated birthing suites</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Immediate uninterrupted golden hour skin-to-skin</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> 24/7 on-site obstetric anesthesiologist for epidural care</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="#packages" class="btn btn-secondary">Explore Birth Suites &amp; Packages</a>
+            </div>
           </article>
 
-          <!-- 4. High-risk pregnancy -->
-          <article class="tilt-card anim-heartbeat" data-category="maternity">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-shield-check"></use></svg></div>
-            <span class="card-tag">Maternal-Fetal Medicine</span>
-            <h3>High-Risk Pregnancy Care</h3>
-            <p class="card-text">Dedicated co-management for twins/multiples, gestational diabetes, preeclampsia prevention, thyroid disorders, and cervical cerclage.</p>
-            <a href="service-details.html" class="btn btn-secondary">View Service Details</a>
-          </article>
-
-          <!-- 5. Normal & C-section delivery -->
-          <article class="tilt-card anim-breathe" data-category="maternity">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-baby"></use></svg></div>
-            <span class="card-tag">Labour &amp; Delivery</span>
-            <h3>Normal, Water &amp; Gentle C-Section Delivery</h3>
-            <p class="card-text">Individualised birth suites supporting unmedicated physiological labour, hydrotherapy water birth, VBAC, and maternal-assisted cesarean birth.</p>
-            <a href="maternity-packages.html" class="btn btn-secondary">Compare Birth Packages</a>
-          </article>
-
-          <!-- 6. Postnatal care -->
-          <article class="tilt-card anim-ripple" data-category="maternity">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-heart"></use></svg></div>
-            <span class="card-tag">Fourth Trimester</span>
-            <h3>Postnatal &amp; Lactation Care</h3>
-            <p class="card-text">Comprehensive 2-week and 6-week maternal recovery checks, IBCLC breastfeeding guidance, pelvic floor rehabilitation, and mood support.</p>
-            <a href="service-details.html" class="btn btn-secondary">View Service Details</a>
-          </article>
-
-          <!-- 7. Infertility & IVF counselling -->
-          <article class="tilt-card anim-blossom" data-category="fertility">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-sparkles"></use></svg></div>
-            <span class="card-tag">Reproductive Medicine</span>
-            <h3>Infertility &amp; IVF Counselling</h3>
-            <p class="card-text">AMH ovarian reserve testing, tubal patency (HyCoSy) scans, ovulation induction, IUI, and coordinated IVF &amp; egg-freezing pathways.</p>
-            <a href="service-details.html" class="btn btn-secondary">View Service Details</a>
-          </article>
-
-          <!-- 8. PCOS/PCOD -->
-          <article class="tilt-card anim-blossom" data-category="fertility">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-activity"></use></svg></div>
-            <span class="card-tag">Endocrine Clinic</span>
-            <h3>PCOS / PCOD Integrated Management</h3>
-            <p class="card-text">Root-cause androgen and insulin-resistance profiling paired with clinical nutrition, cycle regulation, and skin/metabolic support.</p>
-            <a href="service-details.html" class="btn btn-secondary">View Service Details</a>
-          </article>
-
-          <!-- 9. Menstrual disorders -->
-          <article class="tilt-card anim-blossom" data-category="gynecology fertility">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-droplet"></use></svg></div>
-            <span class="card-tag">Cycle Comfort</span>
-            <h3>Menstrual Disorders &amp; Pelvic Pain</h3>
-            <p class="card-text">Thorough evaluation and relief for heavy menstrual bleeding (menorrhagia), severe cramps, PMDD, polyps, and endometriosis.</p>
-            <a href="service-details.html" class="btn btn-secondary">View Service Details</a>
-          </article>
-
-          <!-- 10. Menopause care -->
-          <article class="tilt-card anim-blossom" data-category="fertility gynecology">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-sun"></use></svg></div>
-            <span class="card-tag">Midlife Longevity</span>
-            <h3>Perimenopause &amp; Menopause Care</h3>
-            <p class="card-text">Customised body-identical HRT protocols, vasomotor relief, bone DEXA coordination, urogenital comfort, and sleep restoration.</p>
-            <a href="service-details.html" class="btn btn-secondary">View Service Details</a>
-          </article>
-
-          <!-- 11. Pap smear & HPV screening -->
-          <article class="tilt-card anim-blossom" data-category="gynecology diagnostics">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-shield-check"></use></svg></div>
-            <span class="card-tag">Preventive</span>
-            <h3>Pap Smear &amp; HPV Screening</h3>
-            <p class="card-text">Painless warmed-speculum cervical cytology, high-risk HPV typing, digital video colposcopy, and HPV vaccination.</p>
-            <a href="service-details.html" class="btn btn-secondary">View Service Details</a>
-          </article>
-
-          <!-- 12. Contraception & family planning -->
-          <article class="tilt-card anim-blossom" data-category="gynecology">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-users"></use></svg></div>
-            <span class="card-tag">Reproductive Autonomy</span>
-            <h3>Contraception &amp; Family Planning</h3>
-            <p class="card-text">Unbiased counselling on non-hormonal and hormonal options, plus ultrasound-guided copper/hormonal IUD and implant placement with local comfort anesthesia.</p>
-            <a href="service-details.html" class="btn btn-secondary">View Service Details</a>
-          </article>
-
-          <!-- 13. Gynecologic laparoscopy -->
-          <article class="tilt-card anim-blossom" data-category="gynecology">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-stethoscope"></use></svg></div>
-            <span class="card-tag">Minimally Invasive</span>
-            <h3>Gynecologic Laparoscopy &amp; Hysteroscopy</h3>
-            <p class="card-text">Keyhole day-surgery for ovarian cysts, fibroid myomectomy, endometriosis excision, and hysteroscopic septum or polyp removal.</p>
-            <a href="service-details.html" class="btn btn-secondary">View Service Details</a>
-          </article>
-
-          <!-- 14. Adolescent gynecology -->
-          <article class="tilt-card anim-blossom" data-category="gynecology">
-            <div class="card-icon-wrap"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-sparkles"></use></svg></div>
-            <span class="card-tag">Ages 12–21</span>
-            <h3>Adolescent Gynecology</h3>
-            <p class="card-text">Warm, talk-first consultations for teens experiencing irregular early periods, severe menstrual pain, acne, or cycle anxiety.</p>
-            <a href="service-details.html" class="btn btn-secondary">View Service Details</a>
+          <!-- 4. Postnatal & Lactation Care -->
+          <article class="tilt-card service-dept-card anim-ripple">
+            <div class="service-dept-card__header">
+              <div>
+                <span class="card-tag">Fourth Trimester</span>
+                <h3>Postnatal &amp; Lactation Sanctuary</h3>
+              </div>
+            </div>
+            <p class="card-text">Holistic post-birth restoration caring for the mother. 2-week and 6-week clinical checkups, perineal and cesarean wound therapy, IBCLC lactation consults, and mood monitoring.</p>
+            <ul class="service-feature-list">
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> In-suite IBCLC breastfeeding assessment</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Pelvic floor physiotherapy &amp; diastasis recti screening</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Edinburgh postnatal depression screening &amp; support</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-secondary">Book Postnatal Visit</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- 3. "HOW WE WORK" CLINICAL PROCESS -->
-    <section class="section section-alt" aria-labelledby="how-we-work-heading">
+    <!-- ====================================================================
+         SECTION 2: FETAL SCREENING & DIAGNOSTIC IMAGING
+         ==================================================================== -->
+    <section id="diagnostics" class="section section-alt" aria-labelledby="dept-diagnostics-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Department of Fetal Medicine</span>
+          <h2 id="dept-diagnostics-heading">Fetal Screening &amp; Advanced Imaging</h2>
+          <p>State-of-the-art ultrasound technology operated directly by certified maternal-fetal medicine subspecialists, delivering same-day reassurance and high-resolution clarity.</p>
+        </div>
+
+        <div class="grid-2 reveal" style="gap:2rem;">
+          <!-- 1. 3D/4D Ultrasound & Doppler -->
+          <article class="tilt-card service-dept-card anim-heartbeat">
+            <div class="service-dept-card__header">
+              <div>
+                <span class="card-tag">High-Definition Imaging</span>
+                <h3>3D / 4D Ultrasound &amp; Fetal Doppler</h3>
+              </div>
+            </div>
+            <p class="card-text">Detailed anatomy mapping at 20 weeks, serial growth tracking, amniotic fluid dynamics, and umbilical/cerebral artery Doppler assessments with wall-mounted cinema display for parents.</p>
+            <ul class="service-feature-list">
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Voluson E10 expert ultrasound system with radiant flow</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Instant digital high-res video clips sent to your phone</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Conducted directly by Consultant Fetal Radiologists</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-primary">Schedule Ultrasound</a>
+            </div>
+          </article>
+
+          <!-- 2. Prenatal Screening & NIPT -->
+          <article class="tilt-card service-dept-card anim-heartbeat">
+            <div class="service-dept-card__header">
+              <div>
+                <span class="card-tag">Genetics Clinic</span>
+                <h3>Prenatal Genetics &amp; Cell-Free DNA (NIPT)</h3>
+              </div>
+            </div>
+            <p class="card-text">Non-invasive prenatal screening from week 10. High-accuracy testing for Trisomy 21, 18, 13, sex chromosome variations, and microdeletions accompanied by pre- and post-test genetic counselling.</p>
+            <ul class="service-feature-list">
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Simple non-invasive maternal blood draw (99.4% detection)</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Optional early fetal sex determination (from 10 weeks)</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Dedicated certified genetic counsellor on staff</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-secondary">Book NIPT Screening</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: FERTILITY, PCOS & HORMONE HEALTH
+         ==================================================================== -->
+    <section id="fertility" class="section" aria-labelledby="dept-fertility-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Department of Reproductive Endocrinology</span>
+          <h2 id="dept-fertility-heading">Fertility, PCOS &amp; Hormone Health</h2>
+          <p>Compassionate, root-cause investigations that look beyond standard hormone ranges. We pair advanced medical diagnostics with lifestyle medicine to restore your natural cycle harmony.</p>
+        </div>
+
+        <div class="grid-3 reveal">
+          <!-- 1. Infertility & IVF -->
+          <article class="tilt-card service-dept-card anim-blossom">
+            <span class="card-tag">Conception Support</span>
+            <h3>Infertility &amp; IVF Pathways</h3>
+            <p class="card-text">AMH ovarian reserve profiling, painless HyCoSy tubal patency ultrasound, semen analysis, ovulation tracking, IUI, and coordinated IVF referrals.</p>
+            <ul class="service-feature-list">
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Same-day AMH &amp; antral follicle count</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Couple-centered diagnostic roadmap</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-secondary">Book Fertility Workup</a>
+            </div>
+          </article>
+
+          <!-- 2. PCOS / PCOD -->
+          <article class="tilt-card service-dept-card anim-blossom">
+            <span class="card-tag">Endocrine Clinic</span>
+            <h3>PCOS / PCOD Integrated Care</h3>
+            <p class="card-text">Multi-pillar care combining androgen profiling, insulin resistance testing, in-house clinical dietitian meal planning, cycle regulation, and skin wellness.</p>
+            <ul class="service-feature-list">
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Comprehensive metabolic &amp; hormone panel</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Personalized 90-day cycle recovery plan</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-secondary">Explore PCOS Program</a>
+            </div>
+          </article>
+
+          <!-- 3. Menstrual Disorders -->
+          <article class="tilt-card service-dept-card anim-blossom">
+            <span class="card-tag">Cycle Comfort</span>
+            <h3>Menstrual Disorders &amp; Pelvic Pain</h3>
+            <p class="card-text">Empathetic investigation for severe dysmenorrhea, heavy bleeding (menorrhagia), PMDD, and suspected endometriosis using high-resolution pelvic ultrasound.</p>
+            <ul class="service-feature-list">
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Rapid iron infusion coordination for anemia</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Non-hormonal &amp; hormonal relief protocols</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-secondary">Schedule Pelvic Evaluation</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: PREVENTIVE, ADOLESCENT & SURGICAL GYNECOLOGY
+         ==================================================================== -->
+    <section id="gynecology" class="section section-alt" aria-labelledby="dept-gynecology-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Department of General &amp; Minimally Invasive Gynecology</span>
+          <h2 id="dept-gynecology-heading">Preventive, Adolescent &amp; Surgical Gynecology</h2>
+          <p>Gentle preventive screenings, trauma-informed adolescent care, and keyhole day-surgery performed inside accredited hospital surgical suites.</p>
+        </div>
+
+        <div class="grid-3 reveal">
+          <!-- 1. Pap smear & HPV -->
+          <article class="tilt-card service-dept-card anim-blossom">
+            <span class="card-tag">Preventive Screening</span>
+            <h3>Pap Smear &amp; HPV Screening</h3>
+            <p class="card-text">Painless liquid-based cervical cytology, high-risk HPV DNA typing, digital colposcopy, and Gardasil-9 vaccination with warmed speculum comfort.</p>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-secondary">Book Screening</a>
+            </div>
+          </article>
+
+          <!-- 2. Contraception -->
+          <article class="tilt-card service-dept-card anim-blossom">
+            <span class="card-tag">Family Planning</span>
+            <h3>Contraception &amp; IUD Placement</h3>
+            <p class="card-text">Unbiased counselling on hormonal and non-hormonal methods. Ultrasound-guided IUD (copper/Mirena) and subdermal implant placement with local comfort anesthesia.</p>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-secondary">Consult on Contraception</a>
+            </div>
+          </article>
+
+          <!-- 3. Minimally Invasive Laparoscopy -->
+          <article class="tilt-card service-dept-card anim-blossom">
+            <span class="card-tag">Day Surgery</span>
+            <h3>Gynecologic Laparoscopy</h3>
+            <p class="card-text">Advanced keyhole surgery for ovarian cystectomy, uterine fibroid myomectomy, endometriosis excision, and diagnostic hysteroscopy with rapid home recovery.</p>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-secondary">Surgical Consultation</a>
+            </div>
+          </article>
+
+          <!-- 4. Adolescent Gynecology -->
+          <article class="tilt-card service-dept-card anim-blossom">
+            <span class="card-tag">Ages 12â€“21</span>
+            <h3>Adolescent Gynecology</h3>
+            <p class="card-text">Talk-first, exam-optional gentle visits for teens experiencing irregular periods, painful cramps, hormonal acne, or cycle anxiety in a reassuring environment.</p>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-secondary">Book Teen Visit</a>
+            </div>
+          </article>
+
+          <!-- 5. Perimenopause & HRT -->
+          <article class="tilt-card service-dept-card anim-blossom">
+            <span class="card-tag">Midlife Vitality</span>
+            <h3>Perimenopause &amp; Menopause HRT</h3>
+            <p class="card-text">Evidence-based body-identical hormone therapy (estradiol patches/gels &amp; micronized progesterone), bone DEXA screening, urogenital rejuvenation, and sleep restoration.</p>
+            <div class="service-card-footer">
+              <a href="book-appointment.html" class="btn btn-secondary">Consult Menopause Lead</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: ALL-INCLUSIVE MATERNITY & BIRTH PACKAGES
+         ==================================================================== -->
+    <section id="packages" class="section" aria-labelledby="dept-packages-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">All-Inclusive Birthing</span>
+          <h2 id="dept-packages-heading">Maternity &amp; Birth Packages</h2>
+          <p>Transparent, all-inclusive prenatal and birthing packages with zero hidden fees. Choose the level of care and boutique suite accommodation that suits your birth preferences.</p>
+        </div>
+
+        <div class="grid-3 reveal">
+          <article class="tilt-card">
+            <span class="card-tag">Physiological Birth</span>
+            <h3>Essential Bloom Package</h3>
+            <p style="font-family:var(--font-heading);font-size:2.2rem;font-weight:700;color:var(--plum-700);margin:0.5rem 0;">$4,800</p>
+            <p class="card-text">Ideal for low-risk physiological or planned birth with 2 nights in our private Blossom Birthing &amp; Recovery Suite.</p>
+            <ul class="service-feature-list" style="margin-bottom:1.5rem;">
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> 2 nights private suite stay</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Named midwife labour support</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Pediatric newborn check &amp; labs</li>
+            </ul>
+            <a href="maternity-packages.html" class="btn btn-secondary" style="margin-top:auto;">View Full Inclusions</a>
+          </article>
+
+          <article class="tilt-card anim-heartbeat" style="border-color:var(--champagne-500);box-shadow:var(--shadow-hover);">
+            <span class="card-tag" style="background:var(--champagne-500);color:#FFFFFF;">Most Popular</span>
+            <h3>Comfort Cradle Package</h3>
+            <p style="font-family:var(--font-heading);font-size:2.2rem;font-weight:700;color:var(--plum-700);margin:0.5rem 0;">$7,400</p>
+            <p class="card-text">Complete prenatal-to-postnatal care with 3 nights in the Cradle Deluxe Suite, hydrotherapy pool, and 4D imaging.</p>
+            <ul class="service-feature-list" style="margin-bottom:1.5rem;">
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> 3 nights Cradle Deluxe Suite</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Hydrotherapy water-birth tub access</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> 2 in-suite IBCLC lactation sessions</li>
+            </ul>
+            <a href="maternity-packages.html" class="btn btn-primary" style="margin-top:auto;">View Full Inclusions</a>
+          </article>
+
+          <article class="tilt-card">
+            <span class="card-tag">VIP Sanctuary</span>
+            <h3>Imperial Sanctuary Residence</h3>
+            <p style="font-family:var(--font-heading);font-size:2.2rem;font-weight:700;color:var(--plum-700);margin:0.5rem 0;">$11,200</p>
+            <p class="card-text">Our two-room family residence with 4 nights stay, dedicated night-nurse support, chef dining, and 6-month wellness care.</p>
+            <ul class="service-feature-list" style="margin-bottom:1.5rem;">
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> 4 nights 2-room family suite</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> 1-on-1 overnight newborn nurse</li>
+              <li><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-check"></use></svg> Private chauffeur transfer &amp; dining</li>
+            </ul>
+            <a href="maternity-packages.html" class="btn btn-secondary" style="margin-top:auto;">View Full Inclusions</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: "HOW WE WORK" CLINICAL PROCESS & COMPARISON
+         ==================================================================== -->
+    <section id="methodology" class="section section-alt" aria-labelledby="how-we-work-heading">
       <div class="container">
         <div class="grid-2" style="align-items:center;">
           <div class="reveal">
@@ -255,7 +457,7 @@
             <div class="grid-2" style="gap:1rem;">
               <div class="tilt-card" style="padding:1.25rem;">
                 <h3>Same-Visit Imaging</h3>
-                <p class="card-text">Pelvic or prenatal ultrasound is performed in the same suite by your consultant—no separate radiology referral trips.</p>
+                <p class="card-text">Pelvic or prenatal ultrasound is performed in the same suite by your consultantâ€”no separate radiology referral trips.</p>
               </div>
               <div class="tilt-card" style="padding:1.25rem;">
                 <h3>Pain-Free Protocols</h3>
@@ -350,7 +552,7 @@
         <div>
           <a href="index.html" class="brand-logo" style="color:var(--rose-100);margin-bottom:1rem;">
             <span class="brand-logo__mark"><svg aria-hidden="true"><use href="../assets/icons/icons.svg#icon-logo"></use></svg></span>
-            <span>Bloom &amp; Cradle</span>
+            <span>Bloom &amp; Cradle<small class="brand-logo__sub">Gynecology &amp; Maternity</small></span>
           </a>
           <p style="margin-bottom:1rem;">A boutique sanctuary for women's health, fertility, prenatal diagnostics, and family-centered maternity care.</p>
           <p><strong>Privacy &amp; Confidentiality:</strong> All patient records are protected under strict medical privacy and HIPAA-aligned data protection standards.</p>
@@ -381,7 +583,7 @@
           <h3>Clinic Hours &amp; Location</h3>
           <ul class="footer-links">
             <li>420 Aurelia Boulevard, Suite 300, San Francisco, CA 94108</li>
-            <li>Outpatient Clinic: Mon–Sat, 08:00 – 20:00</li>
+            <li>Outpatient Clinic: Monâ€“Sat, 08:00 â€“ 20:00</li>
             <li>Labour &amp; Delivery Suites: 24 Hours / 7 Days</li>
             <li>Appointments: <a href="tel:+18005550144">+1 (800) 555-0144</a></li>
             <li>Email: <a href="mailto:care@bloomandcradle.example">care@bloomandcradle.example</a></li>
@@ -399,10 +601,6 @@
       </div>
     </div>
   </footer>
-
-  <div class="mobile-sticky-bar">
-    <a href="book-appointment.html" class="btn btn-primary">Book Appointment Now</a>
-  </div>
 
   <script src="../assets/js/tilt.js" defer></script>
   <script src="../assets/js/main.js" defer></script>
