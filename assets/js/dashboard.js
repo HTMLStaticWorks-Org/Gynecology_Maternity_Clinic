@@ -9,17 +9,11 @@
   /* ------------------------------------------------------------------------
      1. CLIENT-SIDE AUTH GUARD (Demo Session Management)
      ------------------------------------------------------------------------ */
-  const isLoggedOut = localStorage.getItem('bc_auth_logged_out') === 'true';
   let session = null;
   try {
     session = JSON.parse(localStorage.getItem('bc_auth_session') || 'null');
   } catch (_) {
     session = null;
-  }
-
-  if (isLoggedOut && !session) {
-    window.location.replace('../login.html');
-    return;
   }
 
   if (!session) {
@@ -30,6 +24,7 @@
       role: isAdminPage ? 'admin' : 'patient',
       loggedInAt: new Date().toISOString()
     };
+    localStorage.removeItem('bc_auth_logged_out');
     localStorage.setItem('bc_auth_session', JSON.stringify(session));
   }
 
